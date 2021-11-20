@@ -67,3 +67,533 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (45.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8440331273687646585)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20211120074452)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8440331273687646585)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8440331273687646585)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20211120074452)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (21.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20211120074452_create_users.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/migrate/20211120074452_create_users.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20211120074452_create_users.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/migrate/20211120074452_create_users.rb:14
+  [1m[36mActiveRecord::SchemaMigration Create (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211120074452"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (5.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (7.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-20 07:54:43.246984"], ["updated_at", "2021-11-20 07:54:43.246984"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8440331273687646585)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2021-11-20 00:08:50 -0800
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 637ms (Views: 635.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-11-20 00:14:25 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 259ms (Views: 257.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-11-20 00:16:42 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 247ms (Views: 245.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-11-20 00:18:05 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 217ms (Views: 215.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-11-20 00:18:40 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 128ms (Views: 123.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-11-20 00:19:10 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/nicoletademaru/Desktop/pinspiration/app/assets/config
+  /Users/nicoletademaru/Desktop/pinspiration/app/assets/images
+  /Users/nicoletademaru/Desktop/pinspiration/app/assets/javascripts
+  /Users/nicoletademaru/Desktop/pinspiration/app/assets/stylesheets
+  /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.6/lib/assets/compiled
+  /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.6/app/assets/javascripts
+  /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.6/lib/assets/compiled
+  /Users/nicoletademaru/Desktop/pinspiration/node_modules):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/assets/javascripts/application.js:12
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__4380334371178418824_70331593785680'
+Started GET "/" for ::1 at 2021-11-20 00:20:27 -0800
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/nicoletademaru/Desktop/pinspiration/app/assets/config
+  /Users/nicoletademaru/Desktop/pinspiration/app/assets/images
+  /Users/nicoletademaru/Desktop/pinspiration/app/assets/javascripts
+  /Users/nicoletademaru/Desktop/pinspiration/app/assets/stylesheets
+  /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.6/lib/assets/compiled
+  /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.6/app/assets/javascripts
+  /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.6/lib/assets/compiled
+  /Users/nicoletademaru/Desktop/pinspiration/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:12
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___957546527156354353_70260309659980'
+Started GET "/" for ::1 at 2021-11-20 00:20:32 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/nicoletademaru/Desktop/pinspiration/app/assets/config
+  /Users/nicoletademaru/Desktop/pinspiration/app/assets/images
+  /Users/nicoletademaru/Desktop/pinspiration/app/assets/javascripts
+  /Users/nicoletademaru/Desktop/pinspiration/app/assets/stylesheets
+  /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.6/lib/assets/compiled
+  /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.6/app/assets/javascripts
+  /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.6/lib/assets/compiled
+  /Users/nicoletademaru/Desktop/pinspiration/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:12
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___957546527156354353_70259946239080'
+Started GET "/" for ::1 at 2021-11-20 00:20:34 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/nicoletademaru/Desktop/pinspiration/app/assets/config
+  /Users/nicoletademaru/Desktop/pinspiration/app/assets/images
+  /Users/nicoletademaru/Desktop/pinspiration/app/assets/javascripts
+  /Users/nicoletademaru/Desktop/pinspiration/app/assets/stylesheets
+  /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.6/lib/assets/compiled
+  /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.6/app/assets/javascripts
+  /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.6/lib/assets/compiled
+  /Users/nicoletademaru/Desktop/pinspiration/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:12
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___957546527156354353_70259944127260'
+Started GET "/" for ::1 at 2021-11-20 00:21:48 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 480ms (Views: 478.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-11-20 00:21:54 -0800
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"hithere", "password"=>"[FILTERED]"}}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (10.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hithere"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (10.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "hithere"], ["password_digest", "$2a$12$RVs1SInHN/Lnqst/HNFlmO6QWWanQzZL./rBEFEA.BP1rrYI0ULFG"], ["session_token", "BEUIGdcERuBxgeYPGTZTVg"], ["created_at", "2021-11-20 08:21:54.469149"], ["updated_at", "2021-11-20 08:21:54.469149"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 324ms (ActiveRecord: 47.0ms)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (1, hithere, null, $2a$12$RVs1SInHN/Lnqst/HNFlmO6QWWanQzZL./rBEFEA.BP1rrYI0ULFG, BEUIGdcERuBxgeYPGTZTVg, 2021-11-20 08:21:54.469149, 2021-11-20 08:21:54.469149).
+: INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Started POST "/api/users" for ::1 at 2021-11-20 00:24:05 -0800
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"hithere", "email"=>"test@test.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :email
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hithere"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (10.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "hithere"], ["password_digest", "$2a$12$mzogz6yM8VpHM2Pqh61/9OeIoZP7H2W3pOT7mFQ4b2zbpCJRSaz7W"], ["session_token", "KKUzZz7yhfwECY8IVKm7Pg"], ["created_at", "2021-11-20 08:24:05.425152"], ["updated_at", "2021-11-20 08:24:05.425152"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 296ms (ActiveRecord: 12.5ms)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (2, hithere, null, $2a$12$mzogz6yM8VpHM2Pqh61/9OeIoZP7H2W3pOT7mFQ4b2zbpCJRSaz7W, KKUzZz7yhfwECY8IVKm7Pg, 2021-11-20 08:24:05.425152, 2021-11-20 08:24:05.425152).
+: INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Started GET "/" for ::1 at 2021-11-20 00:27:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-11-20 00:27:08 -0800
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"hi", "email"=>"test@test.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :email
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (26.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hi"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (12.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "hi"], ["password_digest", "$2a$12$r1/a1zL4KLVKfr5wz2gs.Or1su.kIgMWlAGQfhbO7U5jrT3R8QoBK"], ["session_token", "6WkoNjzEDXLKGJH5ibiBMg"], ["created_at", "2021-11-20 08:27:08.813729"], ["updated_at", "2021-11-20 08:27:08.813729"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 41.3ms)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (3, hi, null, $2a$12$r1/a1zL4KLVKfr5wz2gs.Or1su.kIgMWlAGQfhbO7U5jrT3R8QoBK, 6WkoNjzEDXLKGJH5ibiBMg, 2021-11-20 08:27:08.813729, 2021-11-20 08:27:08.813729).
+: INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Started GET "/" for ::1 at 2021-11-20 00:28:40 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-11-20 00:28:43 -0800
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"hi", "email"=>"test@test.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hi"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (7.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "hi"], ["email", "test@test.com"], ["password_digest", "$2a$12$JUoQB2wrsg2SLzVLLrn0AeTi0HU1gyNVrBZFG89fGpAs6QORM1bjO"], ["session_token", "OOLua0ppMS_58BiiuJbcrg"], ["created_at", "2021-11-20 08:28:43.734428"], ["updated_at", "2021-11-20 08:28:43.734428"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 385ms (ActiveRecord: 51.9ms)
+
+
+  
+NoMethodError (undefined method `login!' for #<Api::UsersController:0x00007fcd5613c330>):
+  
+app/controllers/api/users_controller.rb:5:in `create'
+Started GET "/" for ::1 at 2021-11-20 00:29:11 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-11-20 00:29:18 -0800
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"hi", "email"=>"test@test.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (6.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hi"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 401 Unauthorized in 299ms (Views: 0.2ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/api/users" for ::1 at 2021-11-20 00:29:26 -0800
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"hello", "email"=>"test@test.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hello"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (5.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "hello"], ["email", "test@test.com"], ["password_digest", "$2a$12$5er0QChSqh3r5AgVpeXvfeoqugk6sVIwvNZz0ROS62JFhqbP8O5WK"], ["session_token", "Uw40E73Aq61-P7sdAWWfYQ"], ["created_at", "2021-11-20 08:29:26.331626"], ["updated_at", "2021-11-20 08:29:26.331626"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 279ms (ActiveRecord: 6.6ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(test@test.com) already exists.
+: INSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"):
+  
+app/controllers/api/users_controller.rb:4:in `create'
+Started POST "/api/users" for ::1 at 2021-11-20 00:29:48 -0800
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"hello1", "email"=>"test1@test.com", "password"=>"[FILTERED]"}}
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hello1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (7.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "hello1"], ["email", "test1@test.com"], ["password_digest", "$2a$12$KaCflayDntyIMudmW8ZHsew4MaYrTE4NxKtgxSacXGc/G19xin34i"], ["session_token", "maQmb8LAuIVYoBJR4wp1KA"], ["created_at", "2021-11-20 08:29:49.098766"], ["updated_at", "2021-11-20 08:29:49.098766"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 341ms (ActiveRecord: 10.9ms)
+
+
+  
+NoMethodError (undefined method `login!' for #<Api::UsersController:0x00007fcd563fc778>):
+  
+app/controllers/api/users_controller.rb:5:in `create'
+Started GET "/" for ::1 at 2021-11-20 00:31:12 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-11-20 00:31:20 -0800
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"hello2", "email"=>"test2@test.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (3.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hello2"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "hello2"], ["email", "test2@test.com"], ["password_digest", "$2a$12$yrtLax5cMLWo24MBguIR6e7ETxicr86GZl/QgWuMCHLnMR6ec5Pj2"], ["session_token", "nkRa842UfVTubfg24737Jg"], ["created_at", "2021-11-20 08:31:20.516008"], ["updated_at", "2021-11-20 08:31:20.516008"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 500 Internal Server Error in 345ms (ActiveRecord: 58.1ms)
+
+
+  
+ActionView::MissingTemplate (Missing template api/users/show, application/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/nicoletademaru/Desktop/pinspiration/app/views"
+):
+  
+app/controllers/api/users_controller.rb:6:in `create'
+Started GET "/" for ::1 at 2021-11-20 00:32:25 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 91ms (Views: 89.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-11-20 00:32:34 -0800
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"hello3", "email"=>"test3@test.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hello3"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "hello3"], ["email", "test3@test.com"], ["password_digest", "$2a$12$eLkZZKhQiaIzuLFx.Zul7OPKPF0z0qMG/5qIb7d.p0JkWiwl1nEO2"], ["session_token", "VfOTP0IoPO0pRnrmYw90kQ"], ["created_at", "2021-11-20 08:32:35.103501"], ["updated_at", "2021-11-20 08:32:35.103501"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered api/users/show.json.jbuilder (3.8ms)
+Completed 200 OK in 298ms (Views: 8.6ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for ::1 at 2021-11-20 00:34:11 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-11-20 00:34:19 -0800
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"hello4", "email"=>"test4@test.com", "password"=>"[FILTERED]"}}
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hello4"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "hello4"], ["email", "test4@test.com"], ["password_digest", "$2a$12$ZVZXoNnkT47IHyItEIkFYue8anxKKGMypVhy2BNcJBOes98TnXUt."], ["session_token", "6JWbBBKpXqs6MNP9UnSBlw"], ["created_at", "2021-11-20 08:34:19.434321"], ["updated_at", "2021-11-20 08:34:19.434321"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (5.9ms)
+Completed 200 OK in 297ms (Views: 10.1ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/" for ::1 at 2021-11-20 00:35:44 -0800
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 355ms (Views: 354.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-11-20 00:36:12 -0800
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"hello4", "email"=>"test4@test.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hello4"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (4.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 401 Unauthorized in 1632ms (Views: 0.2ms | ActiveRecord: 26.9ms)
+
+
+Started DELETE "/api/session" for ::1 at 2021-11-20 00:36:42 -0800
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "6JWbBBKpXqs6MNP9UnSBlw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:38
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "hello4"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/user.rb:38
+  [1m[36mUser Update (4.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "rwnW7S14UQsPxk4lMGmOeA"], ["updated_at", "2021-11-20 08:36:42.994243"], ["id", 9]]
+  ↳ app/models/user.rb:38
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:38
+Completed 200 OK in 25ms (Views: 0.3ms | ActiveRecord: 12.6ms)
+
+
+Started POST "/api/session" for ::1 at 2021-11-20 00:37:12 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"hello4", "email"=>"test4@test.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hello4"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 278ms (Views: 6.1ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/api/session" for ::1 at 2021-11-20 00:37:59 -0800
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "rwnW7S14UQsPxk4lMGmOeA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:38
+  [1m[36mUser Exists (7.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "hello4"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/user.rb:38
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "5w1wTWtEYdTwR-lSdknFRw"], ["updated_at", "2021-11-20 08:37:59.118525"], ["id", 9]]
+  ↳ app/models/user.rb:38
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:38
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 17.1ms)
+
+
+Started POST "/api/session" for ::1 at 2021-11-20 00:38:11 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"hello4", "email"=>"test4@test.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hello4"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.2ms)
+Completed 200 OK in 276ms (Views: 5.2ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/api/session" for ::1 at 2021-11-20 00:38:16 -0800
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5w1wTWtEYdTwR-lSdknFRw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:38
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "hello4"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/user.rb:38
+  [1m[36mUser Update (2.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "rxAl5TKahr4_dN-U7xkfsw"], ["updated_at", "2021-11-20 08:38:16.604519"], ["id", 9]]
+  ↳ app/models/user.rb:38
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:38
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/api/users" for ::1 at 2021-11-20 00:38:19 -0800
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"hello4", "email"=>"test4@test.com", "password"=>"[FILTERED]"}}
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hello4"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 401 Unauthorized in 277ms (Views: 0.1ms | ActiveRecord: 4.8ms)
+
+
