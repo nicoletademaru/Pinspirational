@@ -1,4 +1,5 @@
 import React from "react";
+import SignupContatiner from "../sessions/signup_contatiner";
 
 class SignupModal extends React.Component {
 
@@ -13,9 +14,10 @@ class SignupModal extends React.Component {
     }
     return (
       <div>
-
-        <button id="close-signup" onClick={e => this.onClose(e)}>SX</button>
+        <SignupContatiner />
+        <button id="close-signup" onClick={e => this.onClose(e)}>X</button>
       </div>)
   }
 }
+
 export default SignupModal;

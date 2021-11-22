@@ -1,4 +1,5 @@
 import React from "react";
+import LoginContainer from "../sessions/login_container";
 
 class LoginModal extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class LoginModal extends React.Component {
     }
     return (
       <div>
-        
+        <LoginContainer />
         <button id="close-login" onClick={e => this.onClose(e)}>X</button>
       </div>)
   }

@@ -9,7 +9,7 @@ class Splash extends React.Component {
       showLogin: false,
       showSignUp: false,
     }
-    this.toggleLogin = this.toggleLogin.bind(this)
+
     this.showModal = this.showModal.bind(this)
   }
 
@@ -21,16 +21,12 @@ class Splash extends React.Component {
       this.setState({ showSignup: !this.state.showSignup })
     }
   }
-
-  toggleLogin(e) {
-    this.showModal(e);
-  }
   
   render() {
     return (
       <div>
-        <button id="login" onClick={this.toggleLogin}>Login</button>
-        <button id="signup" onClick={this.toggleLogin}>Signup</button>
+        <button id="login" onClick={this.showModal}>Login</button>
+        <button id="signup" onClick={this.showModal}>Signup</button>
         <LoginModal onClose={this.showModal} show={this.state.showLogin} />
         <SignupModal onClose={this.showModal} show={this.state.showSignup} />
       </div>
