@@ -1,11 +1,13 @@
 import React from "react";
-import Splash from "./splash/splash"
+import Modal from './modals/modal'
+import SplashContainer from "./splash/splash_container";
 
 const App = () => (
   <div>
+    <Modal />
     <header>
       <h1>Pinspiration</h1>
-      <Splash />
+      <SplashContainer />
     </header>
   </div>
 );

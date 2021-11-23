@@ -1,37 +1,25 @@
 import React from "react";
-import LoginModal from "./modals/login_modal";
-import SignupModal from "./modals/signup_modal";
-import "./splash.css"
 
-class Splash extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      showLogin: false,
-      showSignUp: false,
-    }
+const Splash = ({ currentUser, logout, openModal }) => {
+  const sessionLinks = () => (
+    <nav className="login-signup">
+      <button onClick={() => openModal('login')}>Login</button>
+      &nbsp;or&nbsp;
+      <button onClick={() => openModal('signup')}>Signup</button>
+    </nav>
+  );
+  const personalGreeting = () => (
+    <hgroup className="header-group">
+      <h2 className="header-name">Hi, {currentUser.username}!</h2>
+      <button className="header-button" onClick={logout}>Log Out</button>
+    </hgroup>
+  );
 
-    this.showModal = this.showModal.bind(this)
-  }
-
-  showModal(e) {
-    if (e.target.id === 'login' || e.target.id === 'close-login') {
-      this.setState({ showLogin: !this.state.showLogin })
-    } else if (e.target.id === 'signup' || e.target.id === 'close-signup') {
-      this.setState({ showSignup: !this.state.showSignup })
-    }
-  }
-  
-  render() {
-    return (
-      <div className='splash'>
-        <button id="login" onClick={this.showModal}>Login</button>
-        <button id="signup" onClick={this.showModal}>Signup</button>
-        <LoginModal onClose={this.showModal} show={this.state.showLogin} />
-        <SignupModal onClose={this.showModal} show={this.state.showSignup} />
-      </div>
-    )
-  }
+  return (
+    currentUser ?
+      personalGreeting(currentUser, logout) :
+      sessionLinks()
+  );
 }
 
 export default Splash;
