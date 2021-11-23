@@ -8,7 +8,7 @@ const Splash = ({ currentUser, logout, openModal }) => {
       <button onClick={() => openModal('signup')}>Signup</button>
     </nav>
   );
-  const personalGreeting = () => (
+  const greeting = () => (
     <hgroup className="header-group">
       <h2 className="header-name">Hi, {currentUser.username}!</h2>
       <button className="header-button" onClick={logout}>Log Out</button>
@@ -17,7 +17,7 @@ const Splash = ({ currentUser, logout, openModal }) => {
 
   return (
     currentUser ?
-      personalGreeting(currentUser, logout) :
+      greeting(currentUser, logout) :
       sessionLinks()
   );
 }

@@ -16,7 +16,7 @@ class SessionForm extends React.Component {
     return (e) => this.setState({ [type]: e.target.value})
   }
 
-  componentDidMount() {
+  UNSAFE_componentDidMount() {
     if (this.props.sessionId !== null ) {
       this.props.history.push('/')
     }

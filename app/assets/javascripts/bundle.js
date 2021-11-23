@@ -360,8 +360,8 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
       };
     }
   }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
+    key: "UNSAFE_componentDidMount",
+    value: function UNSAFE_componentDidMount() {
       if (this.props.sessionId !== null) {
         this.props.history.push('/');
       }
@@ -478,7 +478,7 @@ var Splash = function Splash(_ref) {
     }, "Signup"));
   };
 
-  var personalGreeting = function personalGreeting() {
+  var greeting = function greeting() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hgroup", {
       className: "header-group"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
@@ -489,7 +489,7 @@ var Splash = function Splash(_ref) {
     }, "Log Out"));
   };
 
-  return currentUser ? personalGreeting(currentUser, logout) : sessionLinks();
+  return currentUser ? greeting(currentUser, logout) : sessionLinks();
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Splash);
