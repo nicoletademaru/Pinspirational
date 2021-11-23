@@ -1,6 +1,7 @@
 import React from "react";
 import LoginModal from "./modals/login_modal";
 import SignupModal from "./modals/signup_modal";
+import "./splash.css"
 
 class Splash extends React.Component {
   constructor(props) {
@@ -14,7 +15,6 @@ class Splash extends React.Component {
   }
 
   showModal(e) {
-    console.log(e.target.id)
     if (e.target.id === 'login' || e.target.id === 'close-login') {
       this.setState({ showLogin: !this.state.showLogin })
     } else if (e.target.id === 'signup' || e.target.id === 'close-signup') {
@@ -24,7 +24,7 @@ class Splash extends React.Component {
   
   render() {
     return (
-      <div>
+      <div className='splash'>
         <button id="login" onClick={this.showModal}>Login</button>
         <button id="signup" onClick={this.showModal}>Signup</button>
         <LoginModal onClose={this.showModal} show={this.state.showLogin} />

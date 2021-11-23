@@ -33,16 +33,21 @@ class SessionForm extends React.Component {
     return(
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>Username
-            <input type="text" value={this.state.username} onChange={this.update('username')} /></label>
-          <label>Email
-            <input type="text" value={this.state.username} onChange={this.update('email')} />
+          <label>Username 
+            <input type="text" value={this.state.username} onChange={this.update('username')} />
           </label>
+          <br/>
+          <label>Email
+            <input type="text" value={this.state.email} onChange={this.update('email')} />
+          </label>
+          <br/>
           <label>Password
-            <input type="password" value={this.state.password} onChange={this.update('password')} /></label>
+            <input type="password" value={this.state.password} onChange={this.update('password')} />
+          </label>
+          <br/>
           <button type='submit'>{this.props.formType}</button>
         </form>
-        {this.props.location.pathname === '/login' ? <Link to='/signup'>Signup</Link> : <Link to='/login'>Login</Link> }
+        {/* {this.props.location.pathname === '/login' ? <Link to='/signup'>Signup</Link> : <Link to='/login'>Login</Link> } */}
         <ul> {Array.isArray(this.props.errors) ? this.props.errors.map((error) => <li>{error}</li>) : "" } </ul>
       </div>
     )

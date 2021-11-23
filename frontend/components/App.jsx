@@ -3,8 +3,10 @@ import Splash from "./splash/splash"
 
 const App = () => (
   <div>
-    <h1>Pinspiration</h1>
-    <Splash />
+    <header>
+      <h1>Pinspiration</h1>
+      <Splash />
+    </header>
   </div>
 );
 
