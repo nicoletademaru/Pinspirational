@@ -10,7 +10,7 @@ const mSTP = (state, ownProps) => ({
   formType: 'Signup'
 })
 
-const mDTP = (dispatch, ownProps) => ({
+const mDTP = dispatch => ({
   processForm: user => dispatch(signup(user))
 })
 

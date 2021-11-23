@@ -1,0 +1,44 @@
+.navbar {
+  padding-top: 10px;
+}
+
+.left-navbar {
+  float: left;
+  color: #DD011B;
+  padding-left: 15px;
+}
+
+.left-navbar > p {
+  float: right;
+  // background-color: green;
+  padding-top: 12.5px;
+  font-weight: 600;
+}
+
+.logo {
+  width: 38px;
+}
+
+
+.right-navbar {
+  float: right;
+  padding-top: 10px;
+  padding-right: 15px;
+}
+
+.login-signup > button {
+  font-size: 13px;
+  font-weight: 650;
+  border-radius: 15px 15px 15px 15px;
+  padding: 9px;
+}
+
+.signup-button {
+  background-color: #EBEBEB;
+  color: black;
+}
+
+.login-button {
+  background-color: #DD011B;
+  color: white
+}

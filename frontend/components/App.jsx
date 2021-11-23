@@ -1,13 +1,13 @@
 import React from "react";
 import Modal from './modals/modal'
-import SplashContainer from "./splash/splash_container";
+import Navbar from "./navbar/splash_navbar";
+// import SplashContainer from "./splash/splash_container";
 
 const App = () => (
   <div>
     <Modal />
     <header>
-      <h1>Pinspiration</h1>
-      <SplashContainer />
+      <Navbar />
     </header>
   </div>
 );
