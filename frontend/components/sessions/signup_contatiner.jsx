@@ -7,7 +7,8 @@ import SessionForm from "./session_form"
 const mSTP = (state, ownProps) => ({
   sessionId: state.session.id,
   errors: state.errors.session,
-  formType: 'Signup'
+  formType: 'Signup',
+  cta: "Continue"
 })
 
 const mDTP = dispatch => ({

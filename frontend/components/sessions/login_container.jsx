@@ -8,7 +8,8 @@ import React from 'react';
 const mSTP = (state, ownProps) => ({
   sessionId: state.session.id,
   errors: state.errors.session,
-  formType: 'Login'
+  formType: 'Login',
+  cta: "Log in"
 })
 
 const mDTP = dispatch => ({

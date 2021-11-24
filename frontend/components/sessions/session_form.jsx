@@ -31,6 +31,10 @@ class SessionForm extends React.Component {
   render() {
     return(
       <div className='modal-form'>
+        <div className='session-header'>
+          <img className='logo' src="assets/logo.png" alt="logo" />
+          <h1>Welcome to Pinspiration</h1>
+        </div>
         <form className='session-form' onSubmit={this.handleSubmit}>
             <input 
               type="text" 
@@ -50,7 +54,7 @@ class SessionForm extends React.Component {
               value={this.state.password} 
               onChange={this.update('password')} />
           <br/>
-          <button type='submit'>{this.props.formType}</button>
+          <button type='submit'>{this.props.cta}</button>
         </form>
         {/* {this.props.location.pathname === '/login' ? <Link to='/signup'>Signup</Link> : <Link to='/login'>Login</Link> } */}
         <ul> {Array.isArray(this.props.errors) ? this.props.errors.map((error) => <li>{error}</li>) : "" } </ul>

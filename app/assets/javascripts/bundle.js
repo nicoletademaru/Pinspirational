@@ -292,7 +292,8 @@ var mSTP = function mSTP(state, ownProps) {
   return {
     sessionId: state.session.id,
     errors: state.errors.session,
-    formType: 'Login'
+    formType: 'Login',
+    cta: "Log in"
   };
 };
 
@@ -412,7 +413,13 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "modal-form"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "session-header"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        className: "logo",
+        src: "assets/logo.png",
+        alt: "logo"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Welcome to Pinspiration")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
         className: "session-form",
         onSubmit: this.handleSubmit
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
@@ -432,7 +439,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
         onChange: this.update('password')
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "submit"
-      }, this.props.formType)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, " ", Array.isArray(this.props.errors) ? this.props.errors.map(function (error) {
+      }, this.props.cta)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, " ", Array.isArray(this.props.errors) ? this.props.errors.map(function (error) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, error);
       }) : "", " "));
     }
@@ -469,7 +476,8 @@ var mSTP = function mSTP(state, ownProps) {
   return {
     sessionId: state.session.id,
     errors: state.errors.session,
-    formType: 'Signup'
+    formType: 'Signup',
+    cta: "Continue"
   };
 };
 
