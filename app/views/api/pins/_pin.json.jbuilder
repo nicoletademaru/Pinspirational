@@ -1,0 +1,1 @@
+json.extract! pin, :id, :title, :media, :category, :description, :author_id, :pinboard_id
