@@ -1,4 +1,5 @@
 import React from "react";
+// import SessionFormFooter from "./session_form_footer";
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -65,6 +66,8 @@ class SessionForm extends React.Component {
               onChange={this.update('password')} />
           <br/>
           <button type='submit'>{this.props.cta}</button>
+
+          {/* <SessionFormFooter handleDemo={this.handleDemo} openModal={} /> */}
 
           <div className='modal-footer'>
             <p>&nbsp;OR&nbsp;</p>
