@@ -19,9 +19,21 @@
   background-color: white;
 }
 
+.modal-form {
+  padding: 20px;
+
+  button {
+    border-radius: 15px 15px 15px 15px;
+    padding: 9px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 550;
+    margin-top: 10px;
+  }
+}
+
 .session-header {
   left: 50%;
-  margin-top: 20px;
   text-align: center;
 
   h1 {
@@ -39,6 +51,7 @@
   flex-direction: column;
   margin: 25%;
   margin-top: 30px;
+  margin-bottom: 10px;
 
   * {
     width: 100%;
@@ -55,13 +68,21 @@
   }
 
   button {
-    border-radius: 15px 15px 15px 15px;
-    padding: 9px;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 550;
-    margin-top: 10px;
     background-color: #DD011B;
     color:white;
+    margin-bottom: 10px;
+  }
+}
+
+.modal-footer {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 550;
+  margin-bottom: 20px;
+
+  button {
+    background-color:white;
+    color:black;
+    border: 2px solid grey;
   }
 }

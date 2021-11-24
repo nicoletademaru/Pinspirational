@@ -1,7 +1,8 @@
-import { signup } from "../../actions/session_actions"
-import { connect } from "react-redux"
-import { withRouter } from 'react-router-dom'
-import SessionForm from "./session_form"
+import { signup } from "../../actions/session_actions";
+import { connect } from "react-redux";
+import { withRouter } from 'react-router-dom';
+import SessionForm from "./session_form";
+import { openModal } from "../../actions/modal_actions";
 
 
 const mSTP = (state, ownProps) => ({
@@ -12,6 +13,8 @@ const mSTP = (state, ownProps) => ({
 })
 
 const mDTP = dispatch => ({
+  openModal: modal => dispatch(openModal(modal)),
+  demoLogin: user => dispatch(login(user)),
   processForm: user => dispatch(signup(user))
 })
 

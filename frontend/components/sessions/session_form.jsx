@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleDemo = this.handleDemo.bind(this)
   }
 
   update(type) {
@@ -24,8 +25,18 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log(this.props)
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
+  }
+
+  handleDemo() {
+    const user = { 
+      username: 'demoUser', 
+      email: 'demoUser@demo.com',
+      password: 'password',
+    }
+    this.props.demoLogin(user);
   }
 
   render() {
@@ -55,8 +66,17 @@ class SessionForm extends React.Component {
               onChange={this.update('password')} />
           <br/>
           <button type='submit'>{this.props.cta}</button>
+          
+          <div className='modal-footer'>
+            <p>&nbsp;OR&nbsp;</p>
+            <button onClick={this.handleDemo}>Continue with Demo</button>
+            {this.props.formType === 'Login'
+              ? <a onClick={() => this.props.openModal('signup')}>
+                Not on Pinspiration yet? Sign up</a>
+              : <a onClick={() => this.props.openModal('login')}>
+                Already a member? Log in</a>}
+          </div>
         </form>
-        {/* {this.props.location.pathname === '/login' ? <Link to='/signup'>Signup</Link> : <Link to='/login'>Login</Link> } */}
         <ul> {Array.isArray(this.props.errors) ? this.props.errors.map((error) => <li>{error}</li>) : "" } </ul>
       </div>
     )
