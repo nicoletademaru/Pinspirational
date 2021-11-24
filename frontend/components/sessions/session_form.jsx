@@ -25,7 +25,6 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.props)
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
   }
@@ -66,7 +65,7 @@ class SessionForm extends React.Component {
               onChange={this.update('password')} />
           <br/>
           <button type='submit'>{this.props.cta}</button>
-          
+
           <div className='modal-footer'>
             <p>&nbsp;OR&nbsp;</p>
             <button onClick={this.handleDemo}>Continue with Demo</button>

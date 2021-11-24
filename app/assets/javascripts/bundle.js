@@ -414,7 +414,6 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
     key: "handleSubmit",
     value: function handleSubmit(e) {
       e.preventDefault();
-      console.log(this.props);
       var user = Object.assign({}, this.state);
       this.props.processForm(user);
     }
