@@ -2,7 +2,7 @@ import { signup } from "../../actions/session_actions";
 import { connect } from "react-redux";
 import { withRouter } from 'react-router-dom';
 import SessionForm from "./session_form";
-import { openModal } from "../../actions/modal_actions";
+import { openModal, closeModal } from "../../actions/modal_actions";
 
 
 const mSTP = (state, ownProps) => ({
@@ -15,7 +15,8 @@ const mSTP = (state, ownProps) => ({
 const mDTP = dispatch => ({
   openModal: modal => dispatch(openModal(modal)),
   demoLogin: user => dispatch(login(user)),
-  processForm: user => dispatch(signup(user))
+  processForm: user => dispatch(signup(user)),
+  closeModal: () => dispatch(closeModal()),
 })
 
 export default withRouter(connect(mSTP, mDTP)(SessionForm));

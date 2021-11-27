@@ -3,8 +3,8 @@ import { Route } from "react-router";
 import Modal from './modals/modal'
 import Navbar from "./navbar/splash_navbar";
 import PinIndexContainer from "./pins/pin_index_container";
-import LoginContainer from "./sessions/login_container";
-// import SplashContainer from "./splash/splash_container";
+import { AuthRoute, ProtectedRoute } from '../util/route_utils';
+
 
 const App = () => (
   <div>
@@ -12,7 +12,7 @@ const App = () => (
     <header>
       <Navbar />
     </header>
-    <Route exact path='/feed' component={PinIndexContainer}/>
+      <ProtectedRoute path='/feed' component={PinIndexContainer} />
   </div>
 );
 

@@ -26,7 +26,9 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.processForm(user)
+      .then(() => this.props.history.push('/feed'))
+      .then(this.props.closeModal);
   }
 
   handleDemo() {
@@ -35,7 +37,9 @@ class SessionForm extends React.Component {
       email: 'demoUser@demo.com',
       password: 'password',
     }
-    this.props.demoLogin(user);
+    this.props.demoLogin(user)
+      .then(() => this.props.history.push('/feed'))
+      .then(this.props.closeModal);
   }
 
   render() {
@@ -72,7 +76,8 @@ class SessionForm extends React.Component {
             formType={this.props.formType} 
           />
         </form>
-        <ul> {Array.isArray(this.props.errors) ? this.props.errors.map((error) => <li>{error}</li>) : "" } </ul>
+        <ul> {Array.isArray(this.props.errors) ? this.props.errors.map((error,i) => 
+        <li key={i}>{error}</li>) : "" } </ul>
       </div>
     )
   }

@@ -5,9 +5,16 @@ class PinIndex extends React.Component {
     super(props)
   };
 
+  componentDidMount() {
+    this.props.requestPins();
+  }
+
   render() {
+    const  { pins } =  this.props
     return (
-      <h1>hi</h1>
+      <div>
+        { pins.map((pin,i) => <p key={i}>{pin.title}</p>) }
+      </div>
     )
   }
 }

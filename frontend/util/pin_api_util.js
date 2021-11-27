@@ -1,6 +1,6 @@
 export const fetchPins = () => (
   $.ajax({
-    method: 'POST',
+    method: 'GET',
     url: '/api/pins',
   })
 )
@@ -16,7 +16,7 @@ export const createPin = pin => (
 export const updatePin = pin => (
   $.ajax({
     method: 'POST',
-    url: `/api/pins/${pin.id}`,
+    url: `/api/pin/${pin.id}`,
     data: { pin }
   })
 )
@@ -24,7 +24,7 @@ export const updatePin = pin => (
 export const fetchPin = pinId => (
   $.ajax({
     method: 'GET',
-    url: `/api/pins/${pinId}`
+    url: `/api/pin/${pinId}`
   })
 )
 
