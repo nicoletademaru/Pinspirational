@@ -1,5 +1,5 @@
 import React from "react";
-// import SessionFormFooter from "./session_form_footer";
+import SessionFormFooter from "./session_form_footer";
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -9,7 +9,6 @@ class SessionForm extends React.Component {
       email: "",
       password: ""
     };
-
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleDemo = this.handleDemo.bind(this)
   }
@@ -67,17 +66,11 @@ class SessionForm extends React.Component {
           <br/>
           <button type='submit'>{this.props.cta}</button>
 
-          {/* <SessionFormFooter handleDemo={this.handleDemo} openModal={} /> */}
-
-          <div className='modal-footer'>
-            <p>&nbsp;OR&nbsp;</p>
-            <button onClick={this.handleDemo}>Continue with Demo</button>
-            {this.props.formType === 'Login'
-              ? <a onClick={() => this.props.openModal('signup')}>
-                Not on Pinspiration yet? Sign up</a>
-              : <a onClick={() => this.props.openModal('login')}>
-                Already a member? Log in</a>}
-          </div>
+          <SessionFormFooter 
+            handleDemo={this.handleDemo} 
+            openModal={this.props.openModal} 
+            formType={this.props.formType} 
+          />
         </form>
         <ul> {Array.isArray(this.props.errors) ? this.props.errors.map((error) => <li>{error}</li>) : "" } </ul>
       </div>

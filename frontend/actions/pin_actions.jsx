@@ -24,18 +24,18 @@ export const requestPins = () => dispatch => (
     .then(pins => dispatch(receivePins(pins)))
 );
 
-export const requestPin = pinId = dispatch => (
+export const requestPin = pinId => dispatch => (
   PinApiUtil.fetchPin(pinId) 
     .then(pin => dispatch(receivePin(pin)))
 );
 
-export const createPin = pin = dispatch => (
-  PinApiUtil.createPin(pinId) 
+export const createPin = pin => dispatch => (
+  PinApiUtil.createPin(pin) 
     .then(pin => dispatch(receivePin(pin)))
 );
 
-export const updatePin = pin = dispatch => (
-  PinApiUtil.updatePin(pinId) 
+export const updatePin = pin => dispatch => (
+  PinApiUtil.updatePin(pin) 
     .then(pin => dispatch(receivePin(pin)))
 );
 
