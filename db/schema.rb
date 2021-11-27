@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_200343) do
+ActiveRecord::Schema.define(version: 2021_11_25_005240) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "pins", force: :cascade do |t|
     t.string "title", null: false
-    t.binary "media", null: false
+    t.string "media", null: false
     t.string "category", null: false
     t.string "description"
     t.integer "author_id", null: false
