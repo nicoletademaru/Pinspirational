@@ -1,11 +1,25 @@
 import React from 'react';
 
-export default ({ pin }) => {
-  return ( 
-    <div>
-      <img src={pin.media} alt="photo" />
-      <h1>{pin.title}</h1>
-    </div>
-  )
+class PinIndexItem extends React.Component {
+  constructor(props) {
+    super(props)
+  };
+
+  render() {
+    const { pin, handleClick } = this.props;
+    return (
+      <div>
+        <img
+          id={pin.id}
+          src={pin.media}
+          alt="photo"
+          onClick={handleClick}
+        />
+        <h1>{pin.title}</h1>
+      </div>
+    )
+  }
 };
+
+export default PinIndexItem;
 
