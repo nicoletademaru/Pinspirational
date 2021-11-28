@@ -6,20 +6,17 @@ class PinShow extends React.Component {
   }
 
   render() {
-    const { pins, pinId } = this.props;
-    let currPin = pins[pinId];
-
-    console.log(currPin)
+    const { pin } = this.props;
 
     return (
       <div className='pin-show-page'>
         <div className='pin-show-element'>
           <div className='pin-show-left'>
-            <img src={currPin.media} alt="photo" />
+            <img src={pin.media} alt="photo" />
           </div>
           <div className='pin-show-right'>
-            <h1>{currPin.title}</h1>
-            <p>{currPin.description}</p>
+            <h1>{pin.title}</h1>
+            <p>{pin.description}</p>
           </div>
         </div>
       </div>

@@ -3,13 +3,14 @@ import PinIndexItem from './pin_item'
 
 class PinIndex extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);;
 
-    this.handleClick = this.handleClick.bind(this)
+    this.handleClick = this.handleClick.bind(this);
   };
 
   handleClick(e) {
-    this.props.history.push(`/pins/${e.target.id}`)
+    e.preventDefault();
+    this.props.history.push(`/pins/${e.target.id}`);
   }
 
   componentDidMount() {
@@ -17,7 +18,7 @@ class PinIndex extends React.Component {
   }
 
   render() {
-    const  { pins } =  this.props
+    const  { pins } =  this.props;
     return (
       <div className='index-page-listings'>
         <ul>
