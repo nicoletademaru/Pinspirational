@@ -10,7 +10,7 @@ class Pin < ApplicationRecord
     'home decor'
   ].sort.freeze
 
-  validates :title, :media, :category, :author_id, :pinboard_id, presence: true
+  validates :media, :category, :author_id, :pinboard_id, presence: true
   validates :category, inclusion: { in: CATEGORIES }
   
   belongs_to :user,

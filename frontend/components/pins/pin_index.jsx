@@ -1,4 +1,5 @@
 import React from "react";
+import PinIndexItem from './pin_item'
 
 class PinIndex extends React.Component {
   constructor(props) {
@@ -12,8 +13,12 @@ class PinIndex extends React.Component {
   render() {
     const  { pins } =  this.props
     return (
-      <div>
-        { pins.map((pin,i) => <p key={i}>{pin.title}</p>) }
+      <div className='index-page-listings'>
+        <ul>
+          { pins.map((pin) => (
+          <PinIndexItem key={pin.id} pin={pin}/> )
+          )}
+        </ul>
       </div>
     )
   }

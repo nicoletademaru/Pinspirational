@@ -1,0 +1,15 @@
+.index-page-listings {
+  margin: 5%;
+  column-count: 5;
+  column-gap: 10px;
+  
+  img {
+    width: 98%;
+    border-radius: 15px 15px 15px 15px;
+  }
+
+  h1 {
+    font-size: 12px;
+    font-weight: 550;
+  }
+}

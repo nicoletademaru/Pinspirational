@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_25_005240) do
+ActiveRecord::Schema.define(version: 2021_11_27_225224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "pins", force: :cascade do |t|
-    t.string "title", null: false
+    t.string "title"
     t.string "media", null: false
     t.string "category", null: false
     t.string "description"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2021_11_25_005240) do
     t.integer "pinboard_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category"], name: "index_pins_on_category", unique: true
+    t.index ["category"], name: "index_pins_on_category"
   end
 
   create_table "users", force: :cascade do |t|
