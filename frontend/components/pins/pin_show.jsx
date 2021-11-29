@@ -10,15 +10,15 @@ class PinShow extends React.Component {
 
     return (
       <div className='pin-show-page'>
-        <div className='pin-show-element'>
           <div className='pin-show-left'>
-            <img src={pin.media} alt="photo" />
+            <img className='pin-show-photo' src={pin.media} alt="photo" />
           </div>
           <div className='pin-show-right'>
-            <h1>{pin.title}</h1>
-            <p>{pin.description}</p>
+            <div className='pin-details'>
+              <h1>{pin.title}</h1>
+              <p>{pin.description}</p>
+            </div>
           </div>
-        </div>
       </div>
     )
   }
