@@ -1,5 +1,7 @@
 .pin-show-page {
   position: fixed;
+  display: flex;
+  color: #0E0E0E;
   background-color: white;
   left: 50%;
   width: 810px;
@@ -16,16 +18,21 @@
   border-radius: 15px 0px 0px 15px;
 }
 
-.pin-show-left {
-  float: left;
-}
+
 .pin-show-right {
-  float: right;
   border-radius: 0px 15px 15px 0px;
+}
 
-  .pin-details {
-    float: left;
-    margin-top: 100px 50px auto 50px;
+.pin-details {
+  margin: 100px 0 auto 25px;
 
+  h1 {
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  p {
+    font-size: 12px;
+    margin-top: 10px;
   }
 }

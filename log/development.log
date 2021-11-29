@@ -17747,3 +17747,688 @@ Completed 200 OK in 35527ms (Views: 35441.5ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for ::1 at 2021-11-28 17:24:45 -0800
+  [1m[35m (96.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 2766ms (Views: 2747.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-11-28 17:25:14 -0800
+Started POST "/api/session" for ::1 at 2021-11-28 17:25:14 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demoUser", "email"=>"demoUser@demo.com", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"runtest", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (118.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Completed 401 Unauthorized in 2390ms (Views: 129.2ms | ActiveRecord: 188.7ms)
+
+
+  [1m[36mUser Load (797.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demoUser"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Started POST "/api/session" for ::1 at 2021-11-28 17:25:19 -0800
+Started POST "/api/session" for ::1 at 2021-11-28 17:25:19 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demoUser", "email"=>"demoUser@demo.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demoUser"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  Rendering api/users/show.json.jbuilder
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (5.5ms)
+  Rendered api/users/show.json.jbuilder (43.5ms)
+Completed 200 OK in 5192ms (Views: 201.6ms | ActiveRecord: 2735.4ms)
+
+
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/show.json.jbuilder (133.9ms)
+Completed 200 OK in 1948ms (Views: 259.1ms | ActiveRecord: 177.3ms)
+
+
+Started POST "/api/session" for ::1 at 2021-11-28 17:25:21 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demoUser", "email"=>"demoUser@demo.com", "password"=>"[FILTERED]"}}
+Started POST "/api/session" for ::1 at 2021-11-28 17:25:22 -0800
+Started GET "/api/pins" for ::1 at 2021-11-28 17:25:23 -0800
+  [1m[36mUser Load (3848.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demoUser"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"runtest", "password"=>"[FILTERED]"}}
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered api/users/show.json.jbuilder (102.3ms)
+Completed 200 OK in 4728ms (Views: 131.3ms | ActiveRecord: 3848.1ms)
+
+
+  [1m[36mUser Load (216.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Completed 401 Unauthorized in 235ms (Views: 0.3ms | ActiveRecord: 216.3ms)
+
+
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"runtest", "password"=>"[FILTERED]"}}
+Processing by Api::PinsController#index as JSON
+  [1m[36mUser Load (64.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Completed 401 Unauthorized in 537ms (Views: 0.3ms | ActiveRecord: 486.8ms)
+
+
+  Rendering api/pins/index.json.jbuilder
+  [1m[36mPin Load (50.9ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  ↳ app/views/api/pins/index.json.jbuilder:1
+  Rendered api/pins/_pin.json.jbuilder (4.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/index.json.jbuilder (760.1ms)
+Completed 200 OK in 888ms (Views: 71.5ms | ActiveRecord: 706.1ms)
+
+
+Started GET "/" for ::1 at 2021-11-28 17:31:20 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 152ms (Views: 146.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-11-28 17:31:23 -0800
+Started POST "/api/session" for ::1 at 2021-11-28 17:31:23 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demoUser", "email"=>"demoUser@demo.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (10.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demoUser"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  Rendering api/users/show.json.jbuilder
+Processing by Api::SessionsController#create as JSON
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (4.7ms)
+Completed 200 OK in 306ms (Views: 14.3ms | ActiveRecord: 11.1ms)
+
+
+  Parameters: {"user"=>{"username"=>"", "email"=>"runtest", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Completed 401 Unauthorized in 33ms (Views: 0.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/api/pins" for ::1 at 2021-11-28 17:31:23 -0800
+Processing by Api::PinsController#index as JSON
+  Rendering api/pins/index.json.jbuilder
+  [1m[36mPin Load (12.0ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  ↳ app/views/api/pins/index.json.jbuilder:1
+  Rendered api/pins/_pin.json.jbuilder (5.5ms)
+  Rendered api/pins/_pin.json.jbuilder (0.2ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.3ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/index.json.jbuilder (85.0ms)
+Completed 200 OK in 127ms (Views: 110.2ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/" for ::1 at 2021-11-28 17:34:29 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 139ms (Views: 135.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-11-28 17:34:32 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"runtest", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (19.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Completed 401 Unauthorized in 26ms (Views: 0.6ms | ActiveRecord: 19.1ms)
+
+
+Started POST "/api/session" for ::1 at 2021-11-28 17:34:33 -0800
+Processing by Api::SessionsController#create as JSON
+Started POST "/api/session" for ::1 at 2021-11-28 17:34:33 -0800
+  Parameters: {"user"=>{"username"=>"demoUser", "email"=>"demoUser@demo.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (14.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demoUser"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"runtest", "password"=>"[FILTERED]"}}
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/show.json.jbuilder (3.7ms)
+Completed 200 OK in 299ms (Views: 9.1ms | ActiveRecord: 14.5ms)
+
+
+  [1m[36mUser Load (20.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Completed 401 Unauthorized in 28ms (Views: 0.2ms | ActiveRecord: 20.8ms)
+
+
+Started GET "/api/pins" for ::1 at 2021-11-28 17:34:33 -0800
+Processing by Api::PinsController#index as JSON
+  Rendering api/pins/index.json.jbuilder
+  [1m[36mPin Load (50.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  ↳ app/views/api/pins/index.json.jbuilder:1
+  Rendered api/pins/_pin.json.jbuilder (0.4ms)
+  Rendered api/pins/_pin.json.jbuilder (0.4ms)
+  Rendered api/pins/_pin.json.jbuilder (0.2ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/index.json.jbuilder (64.0ms)
+Completed 200 OK in 79ms (Views: 27.7ms | ActiveRecord: 50.3ms)
+
+
+Started GET "/" for ::1 at 2021-11-28 21:41:37 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 103ms (Views: 101.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-11-28 21:41:39 -0800
+Started POST "/api/session" for ::1 at 2021-11-28 21:41:39 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"runtest", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Completed 401 Unauthorized in 16ms (Views: 0.4ms | ActiveRecord: 10.6ms)
+
+
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demoUser", "email"=>"demoUser@demo.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (13.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demoUser"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 293ms (Views: 6.6ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/api/pins" for ::1 at 2021-11-28 21:41:40 -0800
+Processing by Api::PinsController#index as JSON
+  Rendering api/pins/index.json.jbuilder
+  [1m[36mPin Load (4.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  ↳ app/views/api/pins/index.json.jbuilder:1
+  Rendered api/pins/_pin.json.jbuilder (0.4ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/index.json.jbuilder (12.4ms)
+Completed 200 OK in 19ms (Views: 14.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for ::1 at 2021-11-28 21:43:09 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 62ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-11-28 21:43:11 -0800
+Started POST "/api/session" for ::1 at 2021-11-28 21:43:11 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demoUser", "email"=>"demoUser@demo.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demoUser"], ["LIMIT", 1]]
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"runtest", "password"=>"[FILTERED]"}}
+  ↳ app/models/user.rb:17
+  [1m[36mUser Load (271.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Completed 401 Unauthorized in 272ms (Views: 0.2ms | ActiveRecord: 271.5ms)
+
+
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (6.4ms)
+Completed 200 OK in 289ms (Views: 11.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/api/pins" for ::1 at 2021-11-28 21:43:11 -0800
+Processing by Api::PinsController#index as JSON
+  Rendering api/pins/index.json.jbuilder
+  [1m[36mPin Load (0.9ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  ↳ app/views/api/pins/index.json.jbuilder:1
+  Rendered api/pins/_pin.json.jbuilder (2.7ms)
+  Rendered api/pins/_pin.json.jbuilder (0.2ms)
+  Rendered api/pins/_pin.json.jbuilder (0.2ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/index.json.jbuilder (16.2ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/pins" for ::1 at 2021-11-28 21:45:32 -0800
+Processing by Api::PinsController#index as JSON
+  Rendering api/pins/index.json.jbuilder
+  [1m[36mPin Load (10.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  ↳ app/views/api/pins/index.json.jbuilder:1
+  Rendered api/pins/_pin.json.jbuilder (0.7ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/index.json.jbuilder (23.4ms)
+Completed 200 OK in 30ms (Views: 18.9ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/" for ::1 at 2021-11-28 21:45:47 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 98ms (Views: 91.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-11-28 21:45:50 -0800
+Started POST "/api/session" for ::1 at 2021-11-28 21:45:50 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"runtest", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demoUser", "email"=>"demoUser@demo.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (17.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Completed 401 Unauthorized in 21ms (Views: 0.2ms | ActiveRecord: 17.0ms)
+
+
+  [1m[36mUser Load (9.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demoUser"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 286ms (Views: 6.4ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/api/pins" for ::1 at 2021-11-28 21:45:50 -0800
+Processing by Api::PinsController#index as JSON
+  Rendering api/pins/index.json.jbuilder
+  [1m[36mPin Load (2.6ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  ↳ app/views/api/pins/index.json.jbuilder:1
+  Rendered api/pins/_pin.json.jbuilder (2.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.4ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/index.json.jbuilder (18.4ms)
+Completed 200 OK in 25ms (Views: 21.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2021-11-28 21:47:31 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 113ms (Views: 109.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-11-28 21:47:33 -0800
+Started POST "/api/session" for ::1 at 2021-11-28 21:47:33 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demoUser", "email"=>"demoUser@demo.com", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"runtest", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (46.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Completed 401 Unauthorized in 51ms (Views: 0.6ms | ActiveRecord: 46.2ms)
+
+
+  [1m[36mUser Load (103.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demoUser"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered api/users/show.json.jbuilder (7.6ms)
+Completed 200 OK in 568ms (Views: 18.8ms | ActiveRecord: 103.3ms)
+
+
+Started GET "/api/pins" for ::1 at 2021-11-28 21:47:34 -0800
+Processing by Api::PinsController#index as JSON
+  Rendering api/pins/index.json.jbuilder
+  [1m[36mPin Load (29.7ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  ↳ app/views/api/pins/index.json.jbuilder:1
+  Rendered api/pins/_pin.json.jbuilder (0.9ms)
+  Rendered api/pins/_pin.json.jbuilder (0.3ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/index.json.jbuilder (44.1ms)
+Completed 200 OK in 53ms (Views: 23.2ms | ActiveRecord: 29.7ms)
+
+
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (64.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "pinspiration_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (45.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "pinspiration_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (247.1ms)[0m  [1m[35mCREATE DATABASE "pinspiration_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (47.5ms)[0m  [1m[35mCREATE DATABASE "pinspiration_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "pins" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (59.2ms)[0m  [1m[35mCREATE TABLE "pins" ("id" bigserial primary key, "title" character varying, "media" character varying NOT NULL, "category" character varying NOT NULL, "description" character varying, "author_id" integer NOT NULL, "pinboard_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_pins_on_category" ON "pins"  ("category")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (35.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211127225224)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211120074452),
+(20211125005240),
+(20211127222038),
+(20211124200343);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (18.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-29 06:06:16.797905"], ["updated_at", "2021-11-29 06:06:16.797905"]]
+  ↳ db/schema.rb:13
+  [1m[35m (56.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "pins" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE "pins" ("id" bigserial primary key, "title" character varying, "media" character varying NOT NULL, "category" character varying NOT NULL, "description" character varying, "author_id" integer NOT NULL, "pinboard_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_pins_on_category" ON "pins"  ("category")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211127225224)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211120074452),
+(20211125005240),
+(20211127222038),
+(20211124200343);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-29 06:06:16.956336"], ["updated_at", "2021-11-29 06:06:16.956336"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-11-29 06:06:16.958264"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demoUser"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "demoUser"], ["email", "demoUser@demo.com"], ["password_digest", "$2a$12$iquctxkYtxnIXTjLoJH/zuYfZrkTeZJsAN2TeCtR56u7S5a0X2Lq6"], ["session_token", "4KRbe93zTjv2tBXlZSfWpw"], ["created_at", "2021-11-29 06:06:17.265386"], ["updated_at", "2021-11-29 06:06:17.265386"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mPin Load (1.6ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mPin Create (0.8ms)[0m  [1m[32mINSERT INTO "pins" ("title", "media", "category", "description", "author_id", "pinboard_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "First try at ombre glitter. Any tips are welcome!"], ["media", "https://res.cloudinary.com/dzixdb9eu/image/upload/v1638164973/d84f523cf9ad6786cda65a5868dd56dc_hedr0m.jpg"], ["category", "beauty"], ["description", "Nails: for anything and everything to do with nails and nail care!"], ["author_id", 1], ["pinboard_id", 1], ["created_at", "2021-11-29 06:06:17.299063"], ["updated_at", "2021-11-29 06:06:17.299063"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mPin Create (0.7ms)[0m  [1m[32mINSERT INTO "pins" ("title", "media", "category", "description", "author_id", "pinboard_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "10 Pieces Every Androgynous Style Icon Needs"], ["media", "https://res.cloudinary.com/dzixdb9eu/image/upload/v1638165237/dca4d3ead5d7aa686e21d6d0e33f5a13_sb2cve.jpg"], ["category", "womens fashion"], ["description", "Androgynous style is more prominent than ever. Gone are the days that you're restricted on where you can shop based on gender!"], ["author_id", 1], ["pinboard_id", 2], ["created_at", "2021-11-29 06:06:17.302111"], ["updated_at", "2021-11-29 06:06:17.302111"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mPin Create (0.4ms)[0m  [1m[32mINSERT INTO "pins" ("title", "media", "category", "author_id", "pinboard_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Gym Inspirational Quote Vinyl Sticker Wall Art"], ["media", "https://res.cloudinary.com/dzixdb9eu/image/upload/v1638165737/31c91b5fa3f111993d9031347ed40b27_hxd1lf.jpg"], ["category", "fitness"], ["author_id", 1], ["pinboard_id", 1], ["created_at", "2021-11-29 06:06:17.304658"], ["updated_at", "2021-11-29 06:06:17.304658"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mPin Create (0.4ms)[0m  [1m[32mINSERT INTO "pins" ("title", "media", "category", "author_id", "pinboard_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Classic bathroom design"], ["media", "https://res.cloudinary.com/dzixdb9eu/image/upload/v1638052980/7986686ef5b5bac4b6cab11091d8fc45_xezjja.jpg"], ["category", "home decor"], ["author_id", 1], ["pinboard_id", 1], ["created_at", "2021-11-29 06:06:17.307288"], ["updated_at", "2021-11-29 06:06:17.307288"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mPin Create (0.7ms)[0m  [1m[32mINSERT INTO "pins" ("title", "media", "category", "description", "author_id", "pinboard_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Men's Lookbook"], ["media", "https://res.cloudinary.com/dzixdb9eu/image/upload/v1638165397/32d1e05d4522ffc4476dab1b903a4292_utrykv.jpg"], ["category", "mens fashion"], ["description", "Most popular fashion blog for Men | #men #street #style #fashion #lookbook"], ["author_id", 1], ["pinboard_id", 2], ["created_at", "2021-11-29 06:06:17.309987"], ["updated_at", "2021-11-29 06:06:17.309987"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mPin Create (0.7ms)[0m  [1m[32mINSERT INTO "pins" ("title", "media", "category", "description", "author_id", "pinboard_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Winter castle, silentfield"], ["media", "https://res.cloudinary.com/dzixdb9eu/image/upload/v1638165490/3e14a567f9f543c18b41e53845dc9a8c_r6z4uh.jpg"], ["category", "art"], ["description", "Winter castle by silentfield on ArtStation"], ["author_id", 1], ["pinboard_id", 2], ["created_at", "2021-11-29 06:06:17.312905"], ["updated_at", "2021-11-29 06:06:17.312905"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mPin Create (0.4ms)[0m  [1m[32mINSERT INTO "pins" ("title", "media", "category", "author_id", "pinboard_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Crusty Brussels sprouts with Dijon aioli"], ["media", "https://res.cloudinary.com/dzixdb9eu/image/upload/v1638165581/2cf214d98bfb515f8f3e9d6b39c3b353_xl1rwt.jpg"], ["category", "food"], ["author_id", 1], ["pinboard_id", 2], ["created_at", "2021-11-29 06:06:17.315539"], ["updated_at", "2021-11-29 06:06:17.315539"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mPin Create (0.4ms)[0m  [1m[32mINSERT INTO "pins" ("title", "media", "category", "description", "author_id", "pinboard_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Grey and yellow adjustable dog harness"], ["media", "https://res.cloudinary.com/dzixdb9eu/image/upload/v1638165852/053dd17f7198592b9d5d791b27c3a992_c7qxua.jpg"], ["category", "pets"], ["description", "Gorgeous flecked grey dog harness set. Leash, collar and poo bag are also available. Great for those summer walks, or training for your new puppy."], ["author_id", 1], ["pinboard_id", 2], ["created_at", "2021-11-29 06:06:17.318419"], ["updated_at", "2021-11-29 06:06:17.318419"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+Started GET "/" for ::1 at 2021-11-28 22:06:58 -0800
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicoletademaru/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 547ms (Views: 544.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-11-28 22:07:03 -0800
+Started POST "/api/session" for ::1 at 2021-11-28 22:07:03 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demoUser", "email"=>"demoUser@demo.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demoUser"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  Rendering api/users/show.json.jbuilder
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"runtest", "password"=>"[FILTERED]"}}
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (2.3ms)
+Completed 200 OK in 307ms (Views: 7.6ms | ActiveRecord: 19.7ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Completed 401 Unauthorized in 6ms (Views: 0.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/pins" for ::1 at 2021-11-28 22:07:04 -0800
+Processing by Api::PinsController#index as JSON
+  Rendering api/pins/index.json.jbuilder
+  [1m[36mPin Load (1.9ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  ↳ app/views/api/pins/index.json.jbuilder:1
+  Rendered api/pins/_pin.json.jbuilder (0.3ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.2ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/index.json.jbuilder (36.9ms)
+Completed 200 OK in 50ms (Views: 18.6ms | ActiveRecord: 24.6ms)
+
+
+Started GET "/" for ::1 at 2021-11-28 22:08:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 83ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-11-28 22:08:22 -0800
+Started POST "/api/session" for ::1 at 2021-11-28 22:08:22 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demoUser", "email"=>"demoUser@demo.com", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"runtest", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demoUser"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  [1m[36mUser Load (10.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Completed 401 Unauthorized in 283ms (Views: 0.3ms | ActiveRecord: 10.9ms)
+
+
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (3.1ms)
+Completed 200 OK in 298ms (Views: 8.6ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/api/pins" for ::1 at 2021-11-28 22:08:22 -0800
+Processing by Api::PinsController#index as JSON
+  Rendering api/pins/index.json.jbuilder
+  [1m[36mPin Load (0.8ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  ↳ app/views/api/pins/index.json.jbuilder:1
+  Rendered api/pins/_pin.json.jbuilder (0.4ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/index.json.jbuilder (11.7ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2021-11-28 22:08:44 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 376ms (Views: 373.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-11-28 22:08:47 -0800
+Started POST "/api/session" for ::1 at 2021-11-28 22:08:47 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demoUser", "email"=>"demoUser@demo.com", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"runtest", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demoUser"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+Completed 401 Unauthorized in 279ms (Views: 0.2ms | ActiveRecord: 7.2ms)
+
+
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (2.2ms)
+Completed 200 OK in 286ms (Views: 8.7ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/api/pins" for ::1 at 2021-11-28 22:08:48 -0800
+Processing by Api::PinsController#index as JSON
+  Rendering api/pins/index.json.jbuilder
+  [1m[36mPin Load (1.0ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  ↳ app/views/api/pins/index.json.jbuilder:1
+  Rendered api/pins/_pin.json.jbuilder (0.8ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.2ms)
+  Rendered api/pins/index.json.jbuilder (28.3ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/pins" for ::1 at 2021-11-28 22:11:24 -0800
+Processing by Api::PinsController#index as JSON
+  Rendering api/pins/index.json.jbuilder
+  [1m[36mPin Load (75.7ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  ↳ app/views/api/pins/index.json.jbuilder:1
+  Rendered api/pins/_pin.json.jbuilder (4.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.3ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/index.json.jbuilder (188.8ms)
+Completed 200 OK in 242ms (Views: 164.4ms | ActiveRecord: 75.7ms)
+
+
