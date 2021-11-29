@@ -8,14 +8,16 @@ class PinIndexItem extends React.Component {
   render() {
     const { pin, handleClick } = this.props;
     return (
-      <div>
-        <img
-          id={pin.id}
-          src={pin.media}
-          alt="photo"
-          onClick={handleClick}
-        />
-        <h1>{pin.title}</h1>
+      <div className='pin-index-item'>
+        <figure>
+          <img
+            id={pin.id}
+            src={pin.media}
+            alt="photo"
+            onClick={handleClick}
+          />
+          <figcaption>{pin.title}</figcaption>
+        </figure>
       </div>
     )
   }

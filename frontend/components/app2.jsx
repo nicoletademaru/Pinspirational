@@ -5,6 +5,7 @@ import NavbarContainer from "./navbar/splash_navbar";
 import PinIndexContainer from "./pins/pin_index_container";
 import { AuthRoute, ProtectedRoute } from '../util/route_utils';
 import PinShowContainer from "./pins/pin_show_container";
+import UserShowContainer from './users/users_show_container';
 
 
 const App = () => (
@@ -15,6 +16,7 @@ const App = () => (
     </header>
       <ProtectedRoute path='/feed' component={PinIndexContainer} />
       <ProtectedRoute exact path='/pins/:pinId' component={PinShowContainer}/>
+      <ProtectedRoute exact path='/users/:userId' component={UserShowContainer}/>
   </div>
 );
 

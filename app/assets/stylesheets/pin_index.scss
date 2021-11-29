@@ -1,14 +1,22 @@
 .index-page-listings {
-  margin: 5%;
-  column-count: 5;
-  column-gap: 10px;
-  
+  margin: 50px 80px 30px 0px;
+  columns: 190px;
+}
+
+.pin-index-item {
+  margin-bottom: 10px;
+}
+
+figure {
+  width: 100%;
+  display: inline-block;
+
   img {
-    width: 98%;
+    width: 100%;
     border-radius: 15px 15px 15px 15px;
   }
 
-  h1 {
+  figcaption {
     font-size: 12px;
     font-weight: 550;
   }
