@@ -11,7 +11,7 @@ class Pin < ApplicationRecord
   ].sort.freeze
 
   validates :media, :category, :author_id, :pinboard_id, presence: true
-  validates :category, inclusion: { in: CATEGORIES }
+  # validates :category, inclusion: { in: CATEGORIES }
   
   belongs_to :user,
     foreign_key: :author_id,

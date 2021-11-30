@@ -3,7 +3,7 @@ class Api::PinsController < ApplicationController
     @pin = Pin.new(pin_params)
     @pin.author_id = current_user.id
     if @pin.save 
-      redirect_to pin_url(@pin)
+      render :show
     else 
       render json: @pin.errors.full_messages, status: 422
     end
@@ -36,6 +36,6 @@ class Api::PinsController < ApplicationController
   private 
 
   def pin_params
-    params.permit(:title, :media, :category, :description, :author_id, :pinboard_id)
+    params.require(:pin).permit(:title, :media, :category, :description, :author_id, :pinboard_id)
   end
 end

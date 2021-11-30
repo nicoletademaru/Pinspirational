@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_29_231318) do
+ActiveRecord::Schema.define(version: 2021_11_30_073108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "pins", force: :cascade do |t|
     t.string "title"
-    t.string "media", null: false
-    t.string "category", null: false
+    t.string "media"
+    t.string "category"
     t.string "description"
-    t.integer "author_id", null: false
-    t.integer "pinboard_id", null: false
+    t.integer "author_id"
+    t.integer "pinboard_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category"], name: "index_pins_on_category"

@@ -14,6 +14,10 @@ import { withRouter } from "react-router-dom";
       this.props.history.push('/feed')
     }
 
+    handleClick(e) {
+      e.preventDefault();
+      this.props.history.push(`/users/${this.props.currentUser.id}`)
+    }
 
     render() {
       const { currUser } = this.props;

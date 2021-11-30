@@ -17,3 +17,19 @@
     margin-top: 20px;
   }
 }
+
+.user-info {
+  margin-top: 20px;
+  
+  img {
+    float: left;
+    width: 40px;
+    border-radius: 50%;
+  }
+  h1 {
+    font-size: 12px;
+    font-weight: 600;
+    padding-top: 7px;
+    padding-left: 45px;
+  }
+}
