@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import { logout } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
-import Splash from './splash';
+import RightNav from './right_nav';
 
 const mSTP = ({ session }) => ({
   currentUser: session.currentUser
@@ -16,4 +16,4 @@ const mDTP = dispatch => ({
 export default connect(
   mSTP,
   mDTP
-)(Splash);
+)(RightNav);

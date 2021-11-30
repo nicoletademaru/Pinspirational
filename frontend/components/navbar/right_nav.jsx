@@ -1,6 +1,6 @@
 import React from "react";
 
-const Splash = ({ currentUser, logout, openModal }) => {
+const RightNav = ({ currentUser, logout, openModal }) => {
   const sessionLinks = () => (
     <nav className="login-signup">
       <button className='login-button'onClick={() => openModal('login')}>Log in</button>
@@ -21,4 +21,4 @@ const Splash = ({ currentUser, logout, openModal }) => {
   );
 }
 
-export default Splash;
+export default RightNav;

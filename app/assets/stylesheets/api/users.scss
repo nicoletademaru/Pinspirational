@@ -1,3 +1,19 @@
-// Place all the styles related to the api/users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.users-show-page {
+  width: 100%;
+  margin-top: 60px;
+
+  img {
+    position: relative;
+    left: 50%;
+    width: 100px;
+    margin-left: -50px;
+    border-radius: 50%;
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 20px;
+  }
+}

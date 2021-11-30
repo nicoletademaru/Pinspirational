@@ -8,7 +8,7 @@
 
 User.destroy_all
 
-demoUser = User.create(username:'demoUser', email:'demoUser@demo.com', password:'password')
+demoUser = User.create(username:'demoUser', email:'demoUser@demo.com', password:'demouser1212')
 
 Pin.destroy_all
 

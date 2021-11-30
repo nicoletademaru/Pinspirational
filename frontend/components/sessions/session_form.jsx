@@ -7,8 +7,9 @@ class SessionForm extends React.Component {
     this.state = {
       username: "",
       email: "",
-      password: ""
+      password: "",
     };
+
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleDemo = this.handleDemo.bind(this)
   }
@@ -35,7 +36,7 @@ class SessionForm extends React.Component {
     const user = { 
       username: 'demoUser', 
       email: 'demoUser@demo.com',
-      password: 'password',
+      password: 'demouser1212',
     }
     this.props.demoLogin(user)
       .then(() => this.props.history.push('/feed'))

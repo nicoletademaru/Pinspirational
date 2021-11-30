@@ -1,4 +1,4 @@
-import SplashContainer from "../splash/splash_container"
+import RightNavContainer from "./right_nav_container"
 import React from 'react'
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
@@ -31,7 +31,7 @@ import { withRouter } from "react-router-dom";
             }
           </div>
           <ul className='right-navbar'>
-            <SplashContainer />
+            <RightNavContainer />
           </ul>
         </div>
       )
