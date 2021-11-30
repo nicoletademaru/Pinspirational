@@ -1,17 +1,5 @@
 class Pin < ApplicationRecord
-  CATEGORIES = [
-    'food',
-    'mens fashion',
-    'womens fashion',
-    'pets',
-    'art',
-    'fitness',
-    'beauty',
-    'home decor'
-  ].sort.freeze
-
-  validates :media, :category, :author_id, :pinboard_id, presence: true
-  # validates :category, inclusion: { in: CATEGORIES }
+  validates :media, :author_id, :pinboard_id, presence: true
   
   belongs_to :user,
     foreign_key: :author_id,

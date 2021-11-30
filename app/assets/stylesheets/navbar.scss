@@ -13,7 +13,8 @@
 }
 
 .logo {
-  width: 40px;
+  margin-top: 3px;
+  width: 35px;
 }
 
 .left-home-nav {
@@ -65,7 +66,12 @@
   border-radius: 50%;
   margin: 5px 0 0 -3px;
   }
+
+  button {
+    float: left;
+  }
 }
+
 .header-user-icon:hover {
   background-color: #f1f1f1;
   border-radius: 50%;

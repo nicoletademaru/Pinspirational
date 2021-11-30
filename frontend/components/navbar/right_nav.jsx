@@ -31,7 +31,7 @@ class RightNav extends React.Component {
             onClick={this.handleClick}
           />
         </div>
-        <button className="header-button" onClick={logout}>Log Out</button>
+        {/* <button className="header-button" onClick={logout}>Log Out</button> */}
       </hgroup>
   )};
 

@@ -1,0 +1,63 @@
+.create-pin {
+  background-color: #EAEBEA;
+  width: 100%;
+  margin-top: 63px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  position: fixed;
+}
+
+.create-pin-form {
+  position: relative;
+  background-color: white;
+  left: 50%;
+  width: 700px;
+  height: 530px;
+  margin: 100px 70px 50px -350px;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.form-body {
+  display: flex;
+  margin-top: 60px;
+}
+
+.form-left {
+  padding-left: 50px; 
+}
+
+.media-container {
+  background-color: #EBEBEB;
+  text-align: center;
+  border-radius:3%;
+  width: 250px;
+  height: 410px;
+
+  input {
+    margin-top: 50%;
+  }
+}
+
+.form-right {
+  padding: 20px 0px 20px 30px;
+  width: 300px;
+
+  input { 
+    border-bottom: 1px solid lightgrey;
+  }
+
+  .pin-title {
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .pin-description {
+    color: rgb(238, 237, 237);
+    padding-top: 30px;
+    font-size: 14px;
+    width: 325px;
+  }
+}

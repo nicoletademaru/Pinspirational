@@ -1,4 +1,5 @@
 import React from "react";
+import { CurrUserInfo } from "../users/user_info";
 
 class PinCreateForm extends React.Component {
   constructor(props) {
@@ -7,7 +8,6 @@ class PinCreateForm extends React.Component {
       title: "",
       description: "",
       media: "",
-      category: "",
       pinboard_id: 0,
     }
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,40 +28,36 @@ class PinCreateForm extends React.Component {
     return (
       <div className='create-pin'>
         <form className='create-pin-form' onSubmit={this.handleSubmit}>
-          <button type='submit'>Save</button>
-          <br/>
-          <input 
-            type="text" 
-            placeholder="Add image URL"
-            value={this.state.media}
-            onChange={this.update('media')}
-          />
-          <br/>
-          <input 
-            type="text" 
-            placeholder="Add your title"
-            value={this.state.title}
-            onChange={this.update('title')}
-          />
-          <br/>
-          <input
-            placeholder="Tell everyone what your Pin is about"
-            value={this.state.description}
-            onChange={this.update('description')}
-          />
-          <input
-            placeholder="pinboard id"
-            value={this.state.pinboard_id}
-            onChange={this.update('pinboard_id')}
-          />
-          <br/>
-          <input 
-            type="text" 
-            placeholder="category"
-            value={this.state.category}
-            onChange={this.update('category')}
-          />
-          <br />
+          <div className='form-header'>
+            <button type='submit'>Save</button>
+          </div>
+          <div className='form-body'>
+            <div className='form-left'>
+              <div className='media-container'>
+                <input
+                  type="text"
+                  placeholder="Add image URL"
+                  value={this.state.media}
+                  onChange={this.update('media')}
+                />
+              </div>
+            </div>
+            <div className='form-right'>
+              <input className='pin-title'
+                type="text"
+                placeholder="Add your title"
+                value={this.state.title}
+                onChange={this.update('title')}
+              />
+              <br />
+              <CurrUserInfo user={this.props.currUser} />
+              <input className='pin-description'
+                placeholder="Tell everyone what your Pin is about"
+                value={this.state.description}
+                onChange={this.update('description')}
+              />
+            </div>
+          </div>
         </form>
       </div>
     )
