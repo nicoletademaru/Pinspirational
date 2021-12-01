@@ -8,6 +8,7 @@ import PinShowContainer from "./pins/pin_show_container";
 import SplashContainer from "./splash/splash_container";
 import UserShowContainer from './users/users_show_container';
 import PinCreateContainer from "./pins/pin_create_container";
+import EditPinContainer from "./pins/edit_pin_container";
 
 
 const App = () => (

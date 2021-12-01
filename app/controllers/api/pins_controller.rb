@@ -18,16 +18,17 @@ class Api::PinsController < ApplicationController
     @pin = Pin.find(params[:id])
 
     if current_user.id == @pin.author_id && @pin.update(pin_params)
-      redirect_to api_pins_url
+      render :show 
     else
       render :edit
     end
   end
 
-  def destory
+  def destroy
     @pin = Pin.find(params[:id])
-    if @pin.destory
-      redirect_to api_pins_url
+    if @pin.destroy
+      @pins = Pin.all
+      render :index
     else 
       render json: ['Cannot destroy pin']
     end

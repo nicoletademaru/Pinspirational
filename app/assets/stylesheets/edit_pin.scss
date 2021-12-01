@@ -1,0 +1,63 @@
+.edit-pin {
+  .modal-child {
+    width: 500px;
+    border-radius: 30px;
+  }
+
+  img {
+    float: right;
+    width: 150px;
+    border-radius: 5px;
+  }
+}
+
+.edit-pin-page {
+  border-radius: 12px;
+  margin: 20px 15px 15px 15px;
+  text-align: center;
+
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+}
+
+.edit-form-body {
+  display:flex;
+}
+
+.edit-form-details {
+  text-align: left;
+
+  label {
+    font-size: 13px;
+    font-weight: 100;
+  }
+
+  input {
+    padding: 3px;
+    width: 200px;
+    margin-left: 35px;
+    border-radius: 5px;
+    float: right;
+    border: 1px solid lightgrey;
+  }
+}
+
+// .edit-form-footer > button {
+//   font-size: 13px;
+//   font-weight: 650;
+//   border-radius: 15px 15px 15px 15px;
+//   padding: 9px;
+// }
+
+// .delete-cancel {
+//   background-color: #f1f1f1;
+//   color: black;
+// }
+
+// .save {
+//   background-color: #DD011B;
+//   color: white
+// }

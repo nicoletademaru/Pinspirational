@@ -40,6 +40,6 @@ export const updatePin = pin => dispatch => (
 );
 
 export const deletePin = pinId => dispatch => (
-  EventAPIUtil.deletePin(pinId)
+  PinApiUtil.deletePin(pinId)
     .then(() => dispatch(removePin(pinId)))
 );

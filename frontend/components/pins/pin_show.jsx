@@ -1,4 +1,5 @@
 import React from 'react';
+import { Modal } from '../../components/modals/modal';
 import { UserInfo } from '../users/user_info';
 
 class PinShow extends React.Component {
@@ -6,14 +7,22 @@ class PinShow extends React.Component {
     super(props)
   }
 
+  // componentDidMount() {
+  //   this.props.requestPin(this.props.pin.id)
+  // }
+
   render() {
-    const { pin, user } = this.props;
+    const { pin, sessionId, author, openModal } = this.props;
     return (
       <div className='pin-show-page'>
           <div className='pin-show-left'>
             <img className='pin-show-photo' src={pin.media} alt="photo" />
           </div>
           <div className='pin-show-right'>
+            <div className='pin-edit'>
+              { sessionId === author.id ? 
+                <button onClick={()=> openModal('edit-pin')}>Edit</button> : "" }
+            </div>
             <div className='right-show-details'>
               <div className='pin-details'>
                 <h1>{pin.title}</h1>
@@ -21,7 +30,7 @@ class PinShow extends React.Component {
                 
               </div>
               <div className='pin-owner-info'>
-                <UserInfo user={user} />
+                <UserInfo user={author} />
               </div>
             </div>
           </div>
