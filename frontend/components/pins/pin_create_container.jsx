@@ -7,7 +7,8 @@ const mSTP = state => {
   let currUserId = state.session.id;
   return {
     errors: state.errors,
-    currUser: state.entities.users[currUserId]
+    currUser: state.entities.users[currUserId],
+    authorId: currUserId,
   }
 }
 
