@@ -18,7 +18,8 @@ class Api::PinsController < ApplicationController
     @pin = Pin.find(params[:id])
 
     if current_user.id == @pin.author_id && @pin.update(pin_params)
-      render :show 
+      @pins = Pin.all
+      render :index
     else
       render :edit
     end

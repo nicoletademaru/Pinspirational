@@ -1,3 +1,4 @@
+import { timers } from 'jquery';
 import React from 'react';
 import { Modal } from '../../components/modals/modal';
 import { UserInfo } from '../users/user_info';
@@ -7,11 +8,11 @@ class PinShow extends React.Component {
     super(props)
   }
 
-  // componentDidMount() {
-  //   this.props.requestPin(this.props.pin.id)
-  // }
-
   render() {
+    if (!this.props.pin) {
+      this.props.history.push('/feed')
+    }
+
     const { pin, sessionId, author, openModal } = this.props;
     return (
       <div className='pin-show-page'>

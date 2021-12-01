@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router';
 import { updatePin, deletePin } from '../../actions/pin_actions';
 import { openModal, closeModal } from "../../actions/modal_actions";
 import EditPin from './edit_pin';

@@ -5,6 +5,7 @@ import { requestPin } from "../../actions/pin_actions";
 
 const mSTP = ( state, ownProps ) => {
   let pin = state.entities.pins[ownProps.match.params.pinId]
+
   return {
     pin: pin,
     sessionId: state.session.id,

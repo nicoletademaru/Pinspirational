@@ -1,6 +1,6 @@
 import { login } from "../../actions/session_actions"
 import { connect } from "react-redux"
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router'
 import SessionForm from "./session_form"
 import { openModal, closeModal } from "../../actions/modal_actions";
 

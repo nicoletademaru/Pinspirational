@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import { withRouter } from "react-router";
 import { createPin } from "../../actions/pin_actions";
 import PinCreateForm from "./pin_create_form";
 
