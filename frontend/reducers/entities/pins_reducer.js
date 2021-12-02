@@ -8,8 +8,8 @@ const PinsReducer = (state = {}, action) => {
     case RECEIVE_ALL_PINS:
       return action.pins;
     case RECEIVE_PIN:
-      // nextState[action.pin.id] = action.pin;
-      return action.pin;
+      nextState[action.pin.id] = action.pin;
+      return nextState;
     case REMOVE_PIN:
       delete nextState[action.pinId];
       return nextState;

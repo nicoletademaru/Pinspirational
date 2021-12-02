@@ -17,7 +17,7 @@ class PinShow extends React.Component {
     return (
       <div className='pin-show-page'>
           <div className='pin-show-left'>
-            <img className='pin-show-photo' src={pin.media} alt="photo" />
+            <img className='pin-show-photo' src={pin.photoUrl} alt="photo" />
           </div>
           <div className='pin-show-right'>
             <div className='pin-edit'>

@@ -7,24 +7,37 @@ class PinCreateForm extends React.Component {
     this.state = {
       title: "",
       description: "",
-      media: "",
       pinboard_id: 0,
+      photoFile: null
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleFile = this.handleFile.bind(this);
   }
 
   update(type) {
     return (e) => this.setState({ [type]: e.target.value })
   }
 
+
+  handleFile(e) {
+    this.setState({photoFile: e.currentTarget.files[0]})
+  }
+
   handleSubmit(e) {
     e.preventDefault();
-    const pin = Object.assign({}, this.state);
-    this.props.createPin(pin)
-      .then(pin => this.props.history.push(`/users/${this.props.authorId}`))
+    let formData = new FormData();
+
+    formData.append('pin[title]', this.state.title)
+    formData.append('pin[description]', this.state.description)
+    formData.append('pin[pinboard_id]', 1)
+    formData.append('pin[photo]', this.state.photoFile)
+
+    this.props.createPin(formData)
+      .then(this.props.history.push('/feed'));
   }
 
   render() {
+    console.log(this.state)
     return (
       <div className='create-pin'>
         <p>Create a Pin</p>
@@ -35,12 +48,8 @@ class PinCreateForm extends React.Component {
           <div className='form-body'>
             <div className='form-left'>
               <div className='media-container'>
-                <input
-                  type="text"
-                  placeholder="Add image URL"
-                  value={this.state.media}
-                  onChange={this.update('media')}
-                />
+                <input type="file"
+                  onChange={this.handleFile} />
               </div>
             </div>
             <div className='form-right'>

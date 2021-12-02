@@ -20,6 +20,8 @@ class PinIndex extends React.Component {
   }
 
   render() {
+    if (!this.props.pins) return null;
+    
     const  { pins } =  this.props;
     return (
       <div className='index-page-listings'>

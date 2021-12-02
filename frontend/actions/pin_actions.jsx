@@ -29,10 +29,11 @@ export const requestPin = pinId => dispatch => (
     .then(pin => dispatch(receivePin(pin)))
 );
 
-export const createPin = pin => dispatch => (
+export const createPin = pin => dispatch => {
+  return (
   PinApiUtil.createPin(pin) 
     .then(pin => dispatch(receivePin(pin)))
-);
+  )};
 
 export const updatePin = pin => dispatch => (
   PinApiUtil.updatePin(pin) 

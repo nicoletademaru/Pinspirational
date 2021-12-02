@@ -11,8 +11,9 @@ class PinIndexItem extends React.Component {
       <div className='pin-index-item'>
         <figure>
           <img
+            key={pin.id}
             id={pin.id}
-            src={pin.media}
+            src={pin.photoUrl}
             alt="photo"
             onClick={handleClick}
           />

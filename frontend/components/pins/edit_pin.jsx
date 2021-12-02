@@ -4,7 +4,7 @@ class EditPin extends React.Component {
   constructor(props) {
     super(props)
     this.state= this.props.pin;
-
+    
     this.handleDelete = this.handleDelete.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -54,7 +54,7 @@ class EditPin extends React.Component {
               />
             </label>
           </form>
-          <img src={this.state.media} alt="media" />
+          <img src={this.state.photoUrl} alt="media" />
         </div>
         <div className='edit-form-footer'>
           <div className='left-footer'>
