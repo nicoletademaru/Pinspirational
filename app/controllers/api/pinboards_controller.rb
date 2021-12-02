@@ -23,10 +23,11 @@ class Api::PinboardsController < ApplicationController
     else 
       render json: ['Cannot destroy pin']
     end
-
+  end
   private 
 
   def pinboard_params
     params.requre(:pinboard).permit(:title, :user_id)
   end
+
 end

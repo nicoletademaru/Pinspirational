@@ -5,6 +5,10 @@ class PinboardShow extends React.Component {
     super(props)
   }
 
+  componentDidMount() {
+    this.props.requestPinboard();
+  }
+
   render() {
     // if (!this.props.pinboard) {
     //   this.props.history.push('/feed')

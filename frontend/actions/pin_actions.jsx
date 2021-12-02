@@ -35,10 +35,11 @@ export const createPin = pin => dispatch => {
     .then(pin => dispatch(receivePin(pin)))
   )};
 
-export const updatePin = pin => dispatch => (
+export const updatePin = pin => dispatch => {
+  return (
   PinApiUtil.updatePin(pin) 
     .then(pin => dispatch(receivePin(pin)))
-);
+  )};
 
 export const deletePin = pinId => dispatch => (
   PinApiUtil.deletePin(pinId)

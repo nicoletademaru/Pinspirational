@@ -2,6 +2,7 @@ import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from "../../actions/session
 
 const _nullSession = {
   id: null,
+  currentUser: null,
 };
 
 export default (state=_nullSession, action) => {

@@ -13,6 +13,16 @@
     <script type="text/javascript">
       window.plusUrl = "<%= image_url('plus.png') %>"
     </script>
+    <%if current_user %>
+      <script>
+        window.currentUser = {
+          "id": "<%= current_user.id%>",
+          "username": "<%= current_user.username%>",
+          "email": "<%= current_user.email%>",
+          "profile_pic": "<%= current_user.profile_pic%>",
+        };
+      </script>
+  <%end%>
   </head>
 
   <body>

@@ -6,12 +6,20 @@ class PinShow extends React.Component {
     super(props)
   }
 
+  componentDidMount() {
+    debugger
+    this.props.requestPins();
+  }
+
   render() {
     if (!this.props.pin) {
       this.props.history.push('/feed')
     }
 
-    const { pin, sessionId, author, openModal } = this.props;
+    const { pin, pinId, sessionId, openModal,users } = this.props;
+
+    const author = users[pinId];
+
     return (
       <div className='pin-show-page'>
           <div className='pin-show-left'>

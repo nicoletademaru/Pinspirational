@@ -22,6 +22,7 @@ class RightNav extends React.Component {
       </nav> )
   }
   greeting() {
+    let { logout } = this.props;
     return (
       <hgroup className="header-group">
         <div className="header-user-icon">
@@ -31,12 +32,12 @@ class RightNav extends React.Component {
             onClick={this.handleClick}
           />
         </div>
-        {/* <button className="header-button" onClick={logout}>Log Out</button> */}
+        <button className="header-button" onClick={logout}>Log Out</button>
       </hgroup>
   )};
 
   render() {
-    const { currentUser } = this.props;
+    const { currentUser, logout } = this.props;
     return (
       currentUser ?
         this.greeting(currentUser, logout) :

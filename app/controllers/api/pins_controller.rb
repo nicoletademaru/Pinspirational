@@ -15,7 +15,7 @@ class Api::PinsController < ApplicationController
   end
 
   def update 
-    @pin = Pin.find(params[:id])
+    @pin = Pin.find(params[:pin][:id])
 
     if current_user.id == @pin.author_id && @pin.update(pin_params)
       @pins = Pin.all

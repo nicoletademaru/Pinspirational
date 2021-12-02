@@ -20,9 +20,8 @@ class EditPin extends React.Component {
     formData.append('pin[id]', this.props.pin.id)
     formData.append('pin[title]', this.state.title)
     formData.append('pin[description]', this.state.description)
-    formData.append('pin[pinboard_id]', 2)
+    formData.append('pin[pinboard_id]', 1)
 
-    console.log(formData)
     this.props.updatePin(formData)
       .then(this.props.closeModal);
   }
