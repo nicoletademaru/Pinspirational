@@ -11,6 +11,7 @@ class User < ApplicationRecord
       foreign_key: :author_id,
       class_name: :Pin
 
+    has_many :pinboards
 
   # Class method for finding a user ONLY if we have the correct username and password
   def self.find_by_credentials(username, password)

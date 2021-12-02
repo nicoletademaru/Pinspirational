@@ -1,6 +1,4 @@
-import { timers } from 'jquery';
 import React from 'react';
-import { Modal } from '../../components/modals/modal';
 import { UserInfo } from '../users/user_info';
 
 class PinShow extends React.Component {

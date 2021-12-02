@@ -15,8 +15,15 @@ class EditPin extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    let formData = new FormData();
 
-    this.props.updatePin(this.state)
+    formData.append('pin[id]', this.props.pin.id)
+    formData.append('pin[title]', this.state.title)
+    formData.append('pin[description]', this.state.description)
+    formData.append('pin[pinboard_id]', 2)
+
+    console.log(formData)
+    this.props.updatePin(formData)
       .then(this.props.closeModal);
   }
 

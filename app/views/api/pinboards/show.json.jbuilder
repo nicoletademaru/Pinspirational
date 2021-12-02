@@ -1,0 +1,1 @@
+json.set! json.partial! "/api/pinboards/pinboard", pinboard: @pinboard

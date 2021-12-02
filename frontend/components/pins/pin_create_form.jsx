@@ -7,7 +7,7 @@ class PinCreateForm extends React.Component {
     this.state = {
       title: "",
       description: "",
-      pinboard_id: 0,
+      pinboard_id: 2,
       photoFile: null
     }
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -29,7 +29,7 @@ class PinCreateForm extends React.Component {
 
     formData.append('pin[title]', this.state.title)
     formData.append('pin[description]', this.state.description)
-    formData.append('pin[pinboard_id]', 1)
+    formData.append('pin[pinboard_id]', 2)
     formData.append('pin[photo]', this.state.photoFile)
 
     this.props.createPin(formData)
@@ -37,7 +37,6 @@ class PinCreateForm extends React.Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className='create-pin'>
         <p>Create a Pin</p>
