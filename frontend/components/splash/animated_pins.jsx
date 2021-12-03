@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class AnimatedPins extends React.Component {
   constructor(props) {
     super(props)
@@ -10,11 +11,11 @@ class AnimatedPins extends React.Component {
     let { pins, pinIds } = this.props;
 
     return (
-      <ul>
+      <div className='column-container'>
         { pinIds.map((pinId) => {
-          return <p>{pins[pinId].id}</p> }
+          return <ul className='splash-img'><img src={pins[pinId].photoUrl} alt="pin-img" /></ul>}
         )}
-      </ul>
+      </div>
     )
   }   
 }
