@@ -7,18 +7,16 @@ class PinShow extends React.Component {
   }
 
   componentDidMount() {
-    debugger
-    this.props.requestPins();
+    this.props.requestPin(this.props.pinId)
+    this.props.requestUsers();
   }
 
   render() {
     if (!this.props.pin) {
-      this.props.history.push('/feed')
+      return null
     }
 
-    const { pin, pinId, sessionId, openModal,users } = this.props;
-
-    const author = users[pinId];
+    const { pin, sessionId, openModal, users } = this.props;
 
     return (
       <div className='pin-show-page'>
@@ -27,7 +25,7 @@ class PinShow extends React.Component {
           </div>
           <div className='pin-show-right'>
             <div className='pin-edit'>
-              { sessionId === author.id ? 
+            {sessionId == users[pin.author_id].id ?
                 <button onClick={()=> openModal('edit-pin')}>Edit</button> : "" }
             </div>
             <div className='right-show-details'>
@@ -37,7 +35,7 @@ class PinShow extends React.Component {
                 
               </div>
               <div className='pin-owner-info'>
-                <UserInfo user={author} />
+                <UserInfo user={users[pin.author_id]} />
               </div>
             </div>
           </div>

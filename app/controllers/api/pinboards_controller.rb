@@ -15,6 +15,7 @@ class Api::PinboardsController < ApplicationController
     render :index
   end
 
+
   def destroy 
     @pinboard = Pinboard.find(params[:id])
     if @pinboard.destroy

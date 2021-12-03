@@ -9,6 +9,11 @@ class Api::PinsController < ApplicationController
     end
   end
 
+  def show 
+    @pin = Pin.find(params[:id])
+    render :show
+  end
+
   def index  
     @pins = Pin.all 
     render :index
@@ -30,7 +35,7 @@ class Api::PinsController < ApplicationController
     if @pin.destroy
       @pins = Pin.all
       render :index
-    else 
+    else
       render json: ['Cannot destroy pin']
     end
   end
@@ -38,6 +43,6 @@ class Api::PinsController < ApplicationController
   private 
 
   def pin_params
-    params.require(:pin).permit(:title, :description, :author_id, :pinboard_id, :photo)
+    params.require(:pin).permit(:id, :title, :description, :author_id, :pinboard_id, :photo)
   end
 end

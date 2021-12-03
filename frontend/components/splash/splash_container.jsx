@@ -1,8 +1,13 @@
 import { connect } from 'react-redux';
 import Splash from './splash'
+import { requestPins } from '../../actions/pin_actions'
 
-const mDTP = dispatch => ({
-  fetchPins:() => dispatch(fetchPins())
+const mSTP = state => ({
+  pins: state.entities.pins
 })
 
-export default connect(null,mDTP)(Splash)
+const mDTP = dispatch => ({
+  requestPins:() => dispatch(requestPins())
+})
+
+export default connect(mSTP,mDTP)(Splash)
