@@ -23,7 +23,8 @@ class EditPin extends React.Component {
     formData.append('pin[pinboard_id]', 1)
 
     this.props.updatePin(formData)
-      .then(this.props.closeModal);
+      .then(this.props.closeModal)
+      .then(window.location.reload());
   }
 
   handleDelete() {

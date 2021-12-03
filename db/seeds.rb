@@ -12,14 +12,14 @@ User.destroy_all
 require 'open-uri'
 
 ## User seeds
-demoUser = User.create(id: 1, username:'demoUser', email:'demoUser@demo.com', password:'demouser1212')
-demoUser2 = User.create(id: 2, username:'demoUser2', email:'demoUser2@demo.com', password:'demouser123123')
+demoUser = User.create(username:'demoUser', email:'demoUser@demo.com', password:'demouser1212')
+demoUser2 = User.create(username:'demoUser2', email:'demoUser2@demo.com', password:'demouser123123')
 
 ## Pinboard seeds
-pinboard1 = Pinboard.create(id: 1, title: 'Plant Palace', user_id: 1)
-pinboard2 = Pinboard.create(id: 2, title: 'Mans Best Friend', user_id: 2)
-pinboard3 = Pinboard.create(id: 3, title: 'Future Home', user_id: 2)
-pinboard4 = Pinboard.create(id: 4, title: 'Travel Inspiration', user_id: 1)
+pinboard1 = Pinboard.create(title: 'Plant Palace', user_id: 1)
+pinboard2 = Pinboard.create(title: 'Mans Best Friend', user_id: 2)
+pinboard3 = Pinboard.create(title: 'Future Home', user_id: 2)
+pinboard4 = Pinboard.create(title: 'Travel Inspiration', user_id: 1)
 
 
 ## Pin seeds
@@ -42,6 +42,7 @@ pin17 = Pin.create(id: 17, description: "Beautiful dining area with fireplace", 
 pin22 = Pin.create(id: 22, title: "Accents for a black Dresser", description: "Style ideas for the bedroom", author_id: 2, pinboard_id: 3)
 pin25 = Pin.create(id: 25, title: "Cute bedroom themes", description: "Themes for everyone", author_id: 2, pinboard_id: 3)
 pin29 = Pin.create(id: 29, title: "Simple Laundry Room Ideas", author_id: 2, pinboard_id: 3)
+pin33 = Pin.create(id: 33, title: "Lovely white bedroom", author_id: 2, pinboard_id: 3)
 ## best friend
 pin3 = Pin.create(id: 3,author_id: 2, pinboard_id: 2)
 pin8 = Pin.create(id: 8, title: 'Cute and Cuddly', author_id: 2, pinboard_id: 2)
@@ -80,6 +81,7 @@ file17 = URI.open('https://pinspirational-seeds.s3.us-west-1.amazonaws.com/moder
 file22 = URI.open('https://pinspirational-seeds.s3.us-west-1.amazonaws.com/bedroom.jpeg')
 file25 = URI.open('https://pinspirational-seeds.s3.us-west-1.amazonaws.com/rustichome.jpeg')
 file29 = URI.open('https://pinspirational-seeds.s3.us-west-1.amazonaws.com/laundry.jpeg')
+file33 = URI.open('https://pinspirational-seeds.s3.us-west-1.amazonaws.com/bedroomwhite.jpeg')
 ##best friend
 file3 = URI.open('https://pinspirational-seeds.s3.us-west-1.amazonaws.com/dog.jpeg')
 file8 = URI.open('https://pinspirational-seeds.s3.us-west-1.amazonaws.com/banket-dog.jpeg')
@@ -119,6 +121,7 @@ pin17.photo.attach(io: file17, filename: 'file17.jpg')
 pin22.photo.attach(io: file22, filename: 'file22.jpg')
 pin25.photo.attach(io: file25, filename: 'file25.jpg')
 pin29.photo.attach(io: file29, filename: 'file29.jpg')
+pin33.photo.attach(io: file33, filename: 'file33.jpg')
 ## best friend
 pin3.photo.attach(io: file3, filename: 'file3.jpg')
 pin8.photo.attach(io: file8, filename: 'file8.jpg')

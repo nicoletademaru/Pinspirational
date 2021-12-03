@@ -40,45 +40,96 @@
 }
 
 .destination-item {
-  color: #c08a26
+  color: #7fb1b5
 }
 .home-decor-item {
-  color: #518b72
+  color: #e3ccdf
 }
-.new-look-item {
-  color: #c08a26 
+.best-friend-item {
+  color: #c68c21 
 }
 .green-thumb-item {
-  color: #326945 
+  color: #37744d 
 }
 
+.white-space {
+  position: absolute;
+  height: 4%;
+  width: 34%;
+  left: 33%;
+  background-color: white;
+}
+.white-space2 {
+  position: absolute;
+  height: 2%;
+  width: 67%;
+  left: 16%;
+  background-color: white;
+}
+
+
 .animated-columns-container {
-  // columns: 4;
-  // column-width: 100px;
+  position: absolute;
   display: flex;
+  width: 1500px;
   margin-top: 250px;
+  overflow: hidden;
+  left: 50%;
+  margin-left: -750px;
 }
 
 .animated-column {
   width: 200px;
   flex:1;
   text-align: center;
+
+
+  -webkit-interation-count: infinite;
+  -webkit-animation-direction: normal;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+.column-container {
+  overflow: hidden;
+}
+
+.animated-column {
+  -webkit-animation-name: photos, fadeOut2;
+  -webkit-animation-duration: 13s, 13s;
+  animation-name: photos, fadeOut2;
+  animation-duration: 13s, 13s;
 }
 
 .splash-img > img{
   width:90%;
+  height: 350px;
   left: 50%;
   border-radius: 15px;
+  margin-bottom: 30px;
+  margin-top: 15px;
 }
 
 .center {
   margin-top: 60px;
 }
 
+.mid {
+  margin-top: 35px;  
+}
+
 
 @keyframes fadeOut {
   0% { opacity: 0;}
-  4% { opacity: 1;}
+  10% { opacity: 1;}
+  90% { opacity: 1;}
+  95% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+@keyframes fadeOut2 {
+  0% { opacity: 0;}
+  30% { opacity: 1;}
   90% { opacity: 1;}
   95% {opacity: 0;}
   100% {opacity: 0;}
@@ -96,4 +147,18 @@
   25%, 45% {transform:translate3d(0,-25%,0);}
   50%, 70% {transform:translate3d(0,-50%,0);}
   75%, 95% {transform:translate3d(0,-75%,0);}
+}
+
+@-webkit-keyframes photos {
+  0%, 20%, 100% {transform:translate3d(0,0,0);}
+  25%, 45% {transform:translate3d(0,-25%,0);}
+  50%, 70% {transform:translate3d(0,-49%,0);}
+  75%, 95% {transform:translate3d(0,-73%,0);}
+}
+
+@keyframes photos {
+  0%, 20%, 100% {transform:translate3d(0,0,0);}
+  25%, 45% {transform:translate3d(0,-25%,0);}
+  50%, 70% {transform:translate3d(0,-49%,0);}
+  75%, 95% {transform:translate3d(0,-73%,0);}
 }
