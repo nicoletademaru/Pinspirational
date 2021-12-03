@@ -38,32 +38,32 @@ class Splash extends React.Component {
         </div>
         <div className='animated-columns-container'>
           <div className='animated-column column-0'>
-            <Delayed waitBeforeShow={4000}>
+            <Delayed waitBeforeShow={7000}>
               <AnimatedPins pins={pins} pinIds={[23,13,26,20]} />
             </Delayed>
           </div>
           <div className='animated-column column-1 mid'>
-            <Delayed waitBeforeShow={4000}>
+            <Delayed waitBeforeShow={7000}>
               <AnimatedPins pins={pins} pinIds={[2,1,4,3]} />
             </Delayed>
           </div>
           <div className='animated-column column-2 center'>
-            <Delayed waitBeforeShow={4000}>
+            <Delayed waitBeforeShow={7000}>
               <AnimatedPins pins={pins} pinIds={[12,22,6,15]}/>
             </Delayed>
           </div>
           <div className='animated-column column-3 center'>
-            <Delayed waitBeforeShow={4000}>
+            <Delayed waitBeforeShow={7000}>
               <AnimatedPins  pins={pins} pinIds={[19,9,31,24]}/>
             </Delayed>
           </div>
           <div className='animated-column column-4 mid'>
-            <Delayed waitBeforeShow={4000}>
+            <Delayed waitBeforeShow={7000}>
               <AnimatedPins pins={pins} pinIds={[28,33,26,30]}/> 
             </Delayed>
           </div>
           <div className='animated-column column-5'>
-            <Delayed waitBeforeShow={4000}>
+            <Delayed waitBeforeShow={7000}>
               <AnimatedPins pins={pins} pinIds={[7,29,18,10]}/> 
             </Delayed>
           </div>
