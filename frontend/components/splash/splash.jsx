@@ -38,12 +38,12 @@ class Splash extends React.Component {
         </div>
         <div className='animated-columns-container'>
           <div className='animated-column column-0'>
-            <Delayed waitBeforeShow={500}>
+            <Delayed waitBeforeShow={4000}>
               <AnimatedPins pins={pins} pinIds={[23,13,26,20]} />
             </Delayed>
           </div>
           <div className='animated-column column-1 mid'>
-            <Delayed waitBeforeShow={500}>
+            <Delayed waitBeforeShow={4000}>
               <AnimatedPins pins={pins} pinIds={[2,1,4,3]} />
             </Delayed>
           </div>
