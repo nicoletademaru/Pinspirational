@@ -1,24 +1,22 @@
-# README
+# Pinspirational 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Introduction 
 
-Things you may want to cover:
+Pinspirational, a clone of Pinterest, is a single-page web application that allows users to upload and app photos that inpsire them to create pins. Users can manage collections of their own pins, along with pins created by other users within their pinboards. They can also view other users pinboards for more pins and ideas.
 
-* Ruby version
+## Features
+- Browse through pins on main feed
+- Visit user profiles
+- Uplaod pins
 
-* System dependencies
+## Future Features
+- Pinboard creation and management
+- Follow other users
+- Like pins
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Technologies 
+- Javascript
+- Ruby on Rails
+- React / Redux
+- HTML / CSS
+- AWS 
