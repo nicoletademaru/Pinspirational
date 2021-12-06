@@ -38,33 +38,69 @@ class Splash extends React.Component {
         </div>
         <div className='animated-columns-container'>
           <div className='animated-column column-0'>
-            <Delayed waitBeforeShow={5000}>
-              <AnimatedPins pins={pins} pinIds={[23,13,26,20]} />
+            <Delayed waitBeforeShow={600}>
+              <AnimatedPins pins={pins} 
+                pinIds={[
+                  "https://pinspirational-seeds.s3.us-west-1.amazonaws.com/tall-plant.jpeg",
+                  "https://pinspirational-seeds.s3.us-west-1.amazonaws.com/greencouch.jpeg",
+                  "https://pinspirational-seeds.s3.us-west-1.amazonaws.com/switz.jpeg",
+                  "https://pinspirational-seeds.s3.us-west-1.amazonaws.com/dog-swing.jpeg"
+                ]}
+                />
             </Delayed>
           </div>
           <div className='animated-column column-1 mid'>
-            <Delayed waitBeforeShow={5000}>
-              <AnimatedPins pins={pins} pinIds={[2,1,4,3]} />
+            <Delayed waitBeforeShow={600}>
+              <AnimatedPins pins={pins}
+                pinIds={[
+                  "https://pinspirational-seeds.s3.us-west-1.amazonaws.com/plants.jpeg",
+                  'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/home-decor.jpeg',
+                  'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/louv.jpeg',
+                  'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/dog.jpeg'
+                ]} />
             </Delayed>
           </div>
           <div className='animated-column column-2 center'>
-            <Delayed waitBeforeShow={5000}>
-              <AnimatedPins pins={pins} pinIds={[12,22,6,15]}/>
+            <Delayed waitBeforeShow={600}>
+              <AnimatedPins pins={pins} 
+                pinIds={[
+                  'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/windowplant.jpeg',
+                  'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/bedroom.jpeg',
+                  'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/waterfall.jpeg',
+                  'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/big-doggo.jpeg'
+                ]}/>
             </Delayed>
           </div>
           <div className='animated-column column-3 center'>
-            <Delayed waitBeforeShow={5000}>
-              <AnimatedPins  pins={pins} pinIds={[19,9,31,24]}/>
+            <Delayed waitBeforeShow={600}>
+              <AnimatedPins  pins={pins} 
+                pinIds={[
+                  'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/indoorplant.jpeg',
+                  'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/dining.jpeg',
+                  'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/london.jpeg',
+                  'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/poodles.jpeg'
+                ]}/>
             </Delayed>
           </div>
           <div className='animated-column column-4 mid'>
-            <Delayed waitBeforeShow={5000}>
-              <AnimatedPins pins={pins} pinIds={[28,33,26,30]}/> 
+            <Delayed waitBeforeShow={600}>
+              <AnimatedPins pins={pins} 
+                pinIds={[
+                  'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/plantfriends.jpeg',
+                  'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/bedroomwhite.jpeg',
+                  'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/switz.jpeg',
+                  'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/switz.jpeg'
+                ]}/> 
             </Delayed>
           </div>
           <div className='animated-column column-5'>
-            <Delayed waitBeforeShow={5000}>
-              <AnimatedPins pins={pins} pinIds={[7,29,18,10]}/> 
+            <Delayed waitBeforeShow={600}>
+              <AnimatedPins pins={pins} pinIds={[
+                'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/single-plant.jpeg',
+                'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/laundry.jpeg',
+                'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/canada.jpeg',
+                'https://pinspirational-seeds.s3.us-west-1.amazonaws.com/beach-dog.jpeg'
+              ]}/> 
             </Delayed>
           </div>
           <div className='white-space'></div>

@@ -8,12 +8,12 @@ class AnimatedPins extends React.Component {
 
   render() {
     if (!this.props.pins) return null;
-    let { pins, pinIds } = this.props;
+    let { pinIds } = this.props;
 
     return (
       <div className='column-container'>
-        { pinIds.map((pinId) => {
-          return <ul className='splash-img'><img src={pins[pinId].photoUrl} alt="pin-img" /></ul>}
+        { pinIds.map((src) => {
+          return <ul className='splash-img'><img src={src} alt="pin-img" /></ul>}
         )}
       </div>
     )
