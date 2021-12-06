@@ -9,6 +9,7 @@ Pinspirational, a clone of Pinterest, is a single-page web application that allo
 
 ## Features
 - Browse through pins on main feed
+- Responsive display
 - Visit user profiles
 - Upload and edit pins
 
