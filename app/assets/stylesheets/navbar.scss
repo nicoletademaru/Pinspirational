@@ -8,13 +8,14 @@
 
   .right-navbar {
     float: right;
-    padding-right: 15px;
+    padding-right: 20px;
   }
 }
 
 .logo {
   margin-top: 3px;
-  width: 35px;
+  width: 45px;
+  margin-right: 5px;
 }
 
 .left-home-nav {
@@ -25,15 +26,17 @@
 .left-nav > p {
   float: right;
   color: #DD011B;
-  padding-top: 12.5px;
+  padding-top: 15px;
   font-weight: 600;
+  font-size: 20px;
 }
 
 .login-signup > button, .home-button{
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 650;
-  border-radius: 15px;
-  padding: 9px;
+  border-radius: 20px;
+  padding: 11px;
+  margin: 8px 7px 0 0;
 }
 
 .signup-button {
