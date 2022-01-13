@@ -24,7 +24,7 @@ class RightNav extends React.Component {
   greeting() {
     let { logout } = this.props;
     return (
-      <hgroup className="header-group">
+      <div className="header-group">
         <div className="header-user-icon">
           <img 
             src={this.props.currentUser.profile_pic}
@@ -32,8 +32,33 @@ class RightNav extends React.Component {
             onClick={this.handleClick}
           />
         </div>
-        <button className="header-button" onClick={logout}>Log Out</button>
-      </hgroup>
+        <div className='dropdown'>
+          <img className="dropdown-btn" 
+              src={downArrowUrl}
+          />
+          <div className='dropdown-content'>
+            <div className='user-shortcut'>
+              <img 
+                src={this.props.currentUser.profile_pic} 
+              />
+              <h1>{this.props.currentUser.username}</h1>
+            </div>
+            <div className='drop-item'>
+              <p  >Notifications</p>
+            </div>
+            <div className='drop-item'>
+              <button className="header-button" onClick={logout}>Log Out</button>
+            </div>
+            
+            {/* <Link className='drop-item'>
+              <div >Discover Page</div>
+            </Link>
+            <Link className='drop-item'>
+              <div  >Create a Project</div>
+            </Link> */}
+            </div>
+          </div>
+      </div>
   )};
 
   render() {
