@@ -16,7 +16,7 @@ export const createPinboard = pinboard => (
 export const fetchPinboard = pinboardId => (
   $.ajax({
     method: 'GET',
-    url: `/api/pinboards/${pinboardId}`
+    url: `/api/pinboards/${pinboardId}/pinnings`
   })
 )
 

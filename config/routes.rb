@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     end
     
     resource :session, only: [:create, :destroy]
-    resources :pinnings, only: [:create, :show, :index, :destroy]
+    resources :pinnings, only: [:create, :show, :destroy]
   end
   
   root to: 'static_pages#root'

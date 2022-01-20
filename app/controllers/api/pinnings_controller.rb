@@ -11,17 +11,21 @@ class Api::PinningsController < ApplicationController
 
   def show 
     @pinning = Pinning.find(params[:id])
+
     render :show
   end
 
   def index 
     if params.has_key?(:pinboard_id)
       @pinnings = Pinning.where(pinboard_id: params[:pinboard_id])
-    else 
-      @pinnings = Pinning.all 
-    end
+      @pinboard = Pinboard.find(params[:pinboard_id])
 
-    render :index
+      # @pinnings.each do |pinning| 
+      #   @pin = Pin.find(pinning.pin_id)
+      # end
+
+      render "api/pinboards/show"
+    end
   end
 
   def destroy 

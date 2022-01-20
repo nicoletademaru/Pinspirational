@@ -8,5 +8,4 @@ export default combineReducers({
   users: UsersReducer,
   pins: PinsReducer,
   pinboards: PinboardsReducer,
-  pinnings: PinningsReducer,
 });

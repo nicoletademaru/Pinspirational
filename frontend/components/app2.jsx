@@ -20,7 +20,7 @@ const App = () => (
     <Switch>
       <ProtectedRoute path='/feed' component={PinIndexContainer} />
       <ProtectedRoute exact path='/pins/:pinId' component={PinShowContainer} />
-      <ProtectedRoute exact path='/pinboards/:pinboardId/pins' component={PinboardShowContainer} />
+      <ProtectedRoute exact path='/pinboards/:pinboardId/pinnings' component={PinboardShowContainer} />
       <ProtectedRoute exact path='/pins' component={PinCreateContainer} />
       <ProtectedRoute exact path='/users/:userId' component={UserShowContainer} />
       <AuthRoute exact path='/' component={SplashContainer} />
