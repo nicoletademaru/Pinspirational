@@ -1,1 +1,1 @@
-json.extract! pinning, :id, :pin_id, :pinboard_id
+json.partial! "/api/pinnings/pinning", pinning: @pinning

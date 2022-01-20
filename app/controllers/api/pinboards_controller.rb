@@ -15,6 +15,11 @@ class Api::PinboardsController < ApplicationController
     render :index
   end
 
+  def show 
+    @pinboard = Pinboard.find(params[:id])
+    render :show
+  end
+
 
   def destroy 
     @pinboard = Pinboard.find(params[:id])
@@ -28,7 +33,7 @@ class Api::PinboardsController < ApplicationController
   private 
 
   def pinboard_params
-    params.requre(:pinboard).permit(:title, :user_id)
+    params.requre(:pinboard).permit(:id, :title, :user_id)
   end
 
 end

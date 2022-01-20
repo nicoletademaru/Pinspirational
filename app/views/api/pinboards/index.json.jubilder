@@ -1,4 +1,4 @@
-@pinboardss.each do |pinboard| 
+@pinboards.each do |pinboard| 
   json.set! pinboard.id do 
     json.set! json.partial! "/api/pinboards/pinboard", pinboard: pinboard
   end

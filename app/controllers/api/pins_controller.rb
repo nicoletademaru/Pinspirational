@@ -14,8 +14,13 @@ class Api::PinsController < ApplicationController
     render :show
   end
 
-  def index  
-    @pins = Pin.all 
+  def index 
+    if params.has_key?(:pinboard_id)
+      @pins = Pin.where(pinboard_id: params[:pinboard_id])
+    else 
+      @pins = Pin.all 
+    end
+
     render :index
   end
 

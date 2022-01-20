@@ -14,8 +14,9 @@ class PinIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.requestPins();
-    this.props.requestUsers();
+    // this.props.requestPins();
+    // this.props.requestUsers();
+    this.props.requestPinboards();
   }
 
   render() {

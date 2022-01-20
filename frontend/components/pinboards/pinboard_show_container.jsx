@@ -7,6 +7,7 @@ const mSTP = (state, ownProps) => {
   return {
     pinboard: state.entities.pinboards[ownProps.match.params.pinboardId],
     sessionId: state.session.id,
+    pinboardId: ownProps.match.params.pinboardId,
   }
 };
 

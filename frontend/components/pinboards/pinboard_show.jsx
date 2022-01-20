@@ -6,7 +6,7 @@ class PinboardShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.requestPinboard();
+    this.props.requestPinboard(this.props.pinboardId);
   }
 
   render() {
@@ -17,6 +17,8 @@ class PinboardShow extends React.Component {
     const { pinboard } = this.props;
     return (
       <div className='pinboard-show-page'>
+        {/* <p>{pinboard.title}</p> */}
+        <p>{this.props.pinboardId}</p>
         <p>hi</p>
       </div>
     )
