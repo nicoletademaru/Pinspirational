@@ -1,8 +1,15 @@
 import React from 'react';
+import PinIndexItem from '../pins/pin_item';
 
 class PinboardShow extends React.Component {
   constructor(props) {
     super(props)
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    e.preventDefault();
+    this.props.history.push(`/pins/${e.target.id}`);
   }
 
   componentDidMount() {
@@ -10,17 +17,31 @@ class PinboardShow extends React.Component {
   }
 
   render() {
-    // if (!this.props.pinboard) {
-    //   this.props.history.push('/feed')
-    // }
-
-    const { pinboard } = this.props;
+    if (!this.props.pinboard) {
+      return ""
+    }
+    
+    const { pinboard, pins } = this.props;
+    console.log(pinboard.id)
     return (
       <div className='pinboard-show-page'>
-        {/* <p>{pinboard.title}</p> */}
-        <p>{this.props.pinboardId}</p>
-        <p>hi</p>
+        {/* <p>{pinboard}</p> */}
+        <h1>{this.props.pinboard.title}</h1>
+        <p>{pins.length} Pins</p>
+
+        <div className='index-page-listings'>
+          <ul>
+            { pins.map((pin) => (
+              <PinIndexItem 
+                key={pin.id}
+                pin={pin}
+                handleClick={this.handleClick}
+              /> )
+            )}
+          </ul>
+        </div>
       </div>
+
     )
   }
 }

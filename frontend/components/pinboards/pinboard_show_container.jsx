@@ -4,10 +4,13 @@ import PinboardShow from "./pinboard_show";
 import { requestPinboard } from "../../actions/pinboard_actions";
 
 const mSTP = (state, ownProps) => {
+  let currPinboardId = ownProps.match.params.pinboardId
+
   return {
-    pinboard: state.entities.pinboards[ownProps.match.params.pinboardId],
+    pinboard: state.entities.pinboards[currPinboardId],
+    pins: Object.keys(state.entities.pinnings).map(key => state.entities.pinnings[key]),
     sessionId: state.session.id,
-    pinboardId: ownProps.match.params.pinboardId,
+    pinboardId: currPinboardId,
   }
 };
 

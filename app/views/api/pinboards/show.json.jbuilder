@@ -1,6 +1,6 @@
-
+json.pinboard do
   json.set! json.partial! "/api/pinboards/pinboard", pinboard: @pinboard
-
+end
 
 json.pinnings do
   @pinnings.each do |pinning|

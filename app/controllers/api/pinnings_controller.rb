@@ -20,10 +20,6 @@ class Api::PinningsController < ApplicationController
       @pinnings = Pinning.where(pinboard_id: params[:pinboard_id])
       @pinboard = Pinboard.find(params[:pinboard_id])
 
-      # @pinnings.each do |pinning| 
-      #   @pin = Pin.find(pinning.pin_id)
-      # end
-
       render "api/pinboards/show"
     end
   end

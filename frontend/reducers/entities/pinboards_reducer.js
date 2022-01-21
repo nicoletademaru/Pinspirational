@@ -8,7 +8,7 @@ const PinboardsReducer = (state = {}, action) => {
     case RECEIVE_ALL_BOARDS:
       return action.pinboards;
     case RECEIVE_BOARD:
-      nextState[action.pinboard.id] = action.pinboard;
+      nextState[action.pinboard.pinboard.id] = action.pinboard.pinboard;
       return nextState;
     case REMOVE_BOARD:
       delete nextState[action.pinboardId];
