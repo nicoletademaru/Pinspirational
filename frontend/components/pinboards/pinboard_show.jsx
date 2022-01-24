@@ -25,10 +25,10 @@ class PinboardShow extends React.Component {
     console.log(pinboard.id)
     return (
       <div className='pinboard-show-page'>
-        {/* <p>{pinboard}</p> */}
-        <h1>{this.props.pinboard.title}</h1>
-        <p>{pins.length} Pins</p>
-
+        <div className='pinboard-info'>
+          <h1>{this.props.pinboard.title}</h1>
+          <p>{pins.length} Pins</p>
+        </div>
         <div className='index-page-listings'>
           <ul>
             { pins.map((pin) => (

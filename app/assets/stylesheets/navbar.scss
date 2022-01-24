@@ -1,6 +1,8 @@
 .navbar {
   padding-top: 10px;
-
+  height: 65px;
+  border-bottom: 2px solid rgb(241, 241, 241);
+  box-shadow: 0 0 10px rgb(235, 232, 232);
   .left-nav {
     float: left;
     padding-left: 15px;
@@ -37,7 +39,7 @@
   font-weight: 650;
   border-radius: 20px;
   padding: 11px;
-  margin: 8px 7px 0 0;
+  margin: -2px 7px 0 0;
 }
 
 .signup-button {

@@ -37,6 +37,7 @@ import { withRouter } from "react-router-dom";
           <ul className='right-navbar'>
             <RightNavContainer />
           </ul>
+        <div className='underline'></div>
         </div>
       )
     }
