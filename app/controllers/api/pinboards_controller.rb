@@ -11,8 +11,12 @@ class Api::PinboardsController < ApplicationController
   end
 
   def index
-    @pinboards = Pinboard.all
-    render :index
+    if params.has_key?(:user_id)
+      @pinboards = Pinboard.where(user_id: params[:user_id])
+      @user = User.find(params[:user_id])
+
+      render "api/users/show"
+    end
   end
 
   def show 

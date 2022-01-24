@@ -9,7 +9,7 @@ class RightNav extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    this.props.history.push(`/users/${this.props.currentUser.id}`)
+    this.props.history.push(`/users/${this.props.currentUser.id}/pinboards`)
   }
 
   sessionLinks() {

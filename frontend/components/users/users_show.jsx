@@ -13,6 +13,11 @@ class UserShow extends React.Component {
     this.props.history.push('/pins')
   }
 
+  componentDidMount() {
+    this.props.requestUser(this.props.userId)
+  }
+
+
   render() {
     return (
       <div className='users-show-page'>

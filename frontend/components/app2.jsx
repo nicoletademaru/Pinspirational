@@ -22,7 +22,7 @@ const App = () => (
       <ProtectedRoute exact path='/pins/:pinId' component={PinShowContainer} />
       <ProtectedRoute exact path='/pinboards/:pinboardId/pinnings' component={PinboardShowContainer} />
       <ProtectedRoute exact path='/pins' component={PinCreateContainer} />
-      <ProtectedRoute exact path='/users/:userId' component={UserShowContainer} />
+      <ProtectedRoute exact path='/users/:userId/pinboards' component={UserShowContainer} />
       <AuthRoute exact path='/' component={SplashContainer} />
     </Switch>
   </div>

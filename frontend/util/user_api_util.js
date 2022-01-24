@@ -1,7 +1,7 @@
 export const fetchUser = userId => (
   $.ajax({
     method: 'GET',
-    url: `/api/user/${userId}`
+    url: `/api/users/${userId}/pinboards`
   })
 );
 

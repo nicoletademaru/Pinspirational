@@ -3,7 +3,8 @@ import UserShow from './users_show';
 import { requestUser } from "../../actions/users_actions";
 
 const mSTP = ( state, ownProps ) => ({
-  user: state.entities.users[ownProps.match.params.userId]
+  user: state.entities.users[ownProps.match.params.userId],
+  userId: ownProps.match.params.userId
 });
 
 const mDTP = dispatch => ({

@@ -16,7 +16,7 @@ import { withRouter } from "react-router-dom";
 
     handleClick(e) {
       e.preventDefault();
-      this.props.history.push(`/users/${this.props.currentUser.id}`)
+      this.props.history.push(`/users/${this.props.currentUser.id}/pinboards`)
     }
 
     render() {
