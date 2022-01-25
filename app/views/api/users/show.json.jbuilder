@@ -9,11 +9,16 @@ json.pinboards do
     json.set! pinboard.id do 
       json.set! json.partial! "/api/pinboards/pinboard", pinboard: pinboard
 
-      json.pinnings do
+      json.pins do
         @pinnings.limit(3).each do |pinning|
           json.set! pinning.pin_id do 
             @pin = Pin.find(pinning.pin_id)
-            json.set! json.partial! "/api/pins/pin", pin: @pin
+            json.set! json.extract! @pin, :id 
+            if @pin.photo.attached?
+              json.photoUrl url_for(@pin.photo)
+            else
+              json.photoUrl ""
+            end
           end
         end
       end
