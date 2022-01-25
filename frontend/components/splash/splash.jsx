@@ -7,9 +7,9 @@ class Splash extends React.Component {
     super(props)
   };
 
-  componentDidMount() {
-    this.props.requestPins();
-  }
+  // componentDidMount() {
+  //   this.props.requestPins();
+  // }
 
   render() {
     if (!this.props.pins) return null;

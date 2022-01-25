@@ -11,8 +11,7 @@ const mSTP = state => ({
 
 const mDTP = dispatch => ({
   requestPins: () => dispatch(requestPins()),
-  requestUsers: () => dispatch(requestUsers()),
-  requestPinboards: () => dispatch(requestPinboards)
+  requestUsers: () => dispatch(requestUsers())
 })
 
 export default withRouter(connect(mSTP,mDTP)(PinIndex))
