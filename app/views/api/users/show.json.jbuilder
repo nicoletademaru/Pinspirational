@@ -13,7 +13,7 @@ json.pinboards do
         @pinnings.limit(3).each do |pinning|
           json.set! pinning.pin_id do 
             @pin = Pin.find(pinning.pin_id)
-            json.set! json.extract! @pin, :id 
+            json.set! json.extract! @pin 
             if @pin.photo.attached?
               json.photoUrl url_for(@pin.photo)
             else
