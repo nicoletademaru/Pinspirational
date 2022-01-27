@@ -12,29 +12,27 @@ class PinboardItem extends React.Component {
       pins = Object.keys(pinboard.pins).map(key => pinboard.pins[key])}
 
     return (
-      <div className='pinboard-index-item'>
+      <div className='pinboard-index-item' onClick={handleClick}>
         <div className='pinboard-preview'>
-          { pins.length > 0 ? 
-            <img className='left-photo'
-              src={pins[0].photoUrl}
+          <img className='left-photo'
+            src= {pins.length > 0 ? pins[0].photoUrl : greyImg }
+            alt="photo"
+            id={pinboard.id}
+          />
+          <div className='right-photos'>
+            <img className='top-photo'
+              src= {pins.length > 1 ? pins[1].photoUrl : greyImg }
               alt="photo"
-              onClick={handleClick}
-              /> : " " }
-          { pins.length > 1 ? 
-            <img className='mid-photo'
-              src={pins[1].photoUrl}
+              id={pinboard.id}
+            />
+            <img className='bottom-photo'
+              src= {pins.length > 2 ? pins[2].photoUrl : greyImg }
               alt="photo"
-              onClick={handleClick}
-              /> : " " }
-          { pins.length > 0 ? 
-            <img className='right-photo'
-              src={pins[2].photoUrl}
-              alt="photo"
-              onClick={handleClick}
-              /> : " " }
+              id={pinboard.id}
+            />
+          </div>
         </div>
         <p>{pinboard.title}</p>
-
       </div>
     )
   }

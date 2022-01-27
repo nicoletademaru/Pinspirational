@@ -17,6 +17,8 @@ class UserShow extends React.Component {
 
   handleClick(e) {
     e.preventDefault;
+    debugger
+    console.log(e.target)
     this.props.history.push(`/pinboards/${e.target.id}/pinnings`)
   }
 
@@ -29,14 +31,16 @@ class UserShow extends React.Component {
     const { pinboards } = this.props;
     return (
       <div className='users-show-page'>
-        <img src={this.props.user.profile_pic} alt="profile_pic" />
-        <h1>{this.props.user.username}</h1>
-        <div>
-          <img className='plus-img'
-            src={plusUrl}
-            onClick={this.createPin}
-          />
+        <div className='user-show-info'>
+          <img src={this.props.user.profile_pic} alt="profile_pic" />
+          <h1>{this.props.user.username}</h1>
         </div>
+        <div>
+            <img className='plus-img'
+              src={plusUrl}
+              onClick={this.createPin}
+            />
+          </div>
         <div className='pinboard-items'>
           <ul>
             { pinboards.map((pinboard) => 

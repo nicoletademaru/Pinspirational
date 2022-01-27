@@ -10,7 +10,9 @@ const PinningsReducer = (state = {}, action) => {
       nextState[action.pinning.id] = action.pinning;
       return nextState;
     case RECEIVE_BOARD:
-      nextState = action.pinboard.pinnings;
+      if (action.pinboard.pinnings != undefined) {
+      nextState = action.pinboard.pinnings; }
+      else {nextState = {}}
       return nextState;
     case REMOVE_PINNING:
       delete nextState[action.pinningId];

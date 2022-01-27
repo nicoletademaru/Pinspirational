@@ -1,7 +1,9 @@
 .users-show-page {
   width: 100%;
   margin-top: 60px;
+}
 
+.user-show-info {
   img {
     position: relative;
     left: 50%;
@@ -17,7 +19,6 @@
     margin-top: 20px;
   }
 }
-
 .user-info {
   margin-top: 20px;
   height: 40px;
@@ -33,4 +34,10 @@
     padding-top: 7px;
     padding-left: 45px;
   }
+}
+
+.plus-img {
+  float: right;
+  height: 20px;
+  margin-right: 30px;
 }

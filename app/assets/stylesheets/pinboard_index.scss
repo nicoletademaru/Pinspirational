@@ -1,0 +1,38 @@
+.pinboard-items {
+  float: left;
+  width: 100%;
+  // columns: 250px;
+  padding: 50px 80px 50px 80px;
+}
+
+.pinboard-index-item {
+  float: left;
+  margin-right: 20px;
+  border-radius: 15px;
+  width: 250px;
+  height: 200px;
+
+  .left-photo {
+    height: 200px;
+    width: 49.5%;
+    border-radius: 15px 0 0 15px;
+  }
+}
+
+.right-photos {
+  float: right;
+  width: 49.5%;
+
+  .top-photo {
+    height: 99px;
+    width: 100%;
+    border-radius: 0 15px 0 0;
+  }
+  .bottom-photo {
+    height: 99px;
+    width: 100%;
+    border-radius: 0 0 15px 0;
+    margin-top: -2px;
+  }
+
+}
