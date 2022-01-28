@@ -28,7 +28,7 @@ class UserShow extends React.Component {
 
 
   render() {
-    const { pinboards } = this.props;
+    const { pinboards, openModal } = this.props;
     return (
       <div className='users-show-page'>
         <div className='user-show-info'>
@@ -40,6 +40,9 @@ class UserShow extends React.Component {
               src={plusUrl}
               onClick={this.createPin}
             />
+            <img className='plus-img' 
+              src={plusUrl} 
+              onClick={()=> openModal('pinboard')}/>
           </div>
         <div className='pinboard-items'>
           <ul>

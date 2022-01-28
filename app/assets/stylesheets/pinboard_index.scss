@@ -2,12 +2,12 @@
   float: left;
   width: 100%;
   // columns: 250px;
-  padding: 50px 80px 50px 80px;
+  padding: 20px 80px 50px 80px;
 }
 
 .pinboard-index-item {
   float: left;
-  margin-right: 20px;
+  margin: 0 20px 70px 0;
   border-radius: 15px;
   width: 250px;
   height: 200px;
@@ -25,11 +25,12 @@
 
   img {
       max-width: 100%;
+      height: auto;
     }
   .pinboard-img {
     margin-top: -30%;
   }
-  
+
   .right-photo {
     height: 99px;
     width: 100%;

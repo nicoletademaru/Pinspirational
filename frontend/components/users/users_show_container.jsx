@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import UserShow from './users_show';
 import { requestUser } from "../../actions/users_actions";
+import { openModal } from "../../actions/modal_actions";
 
 const mSTP = ( state, ownProps ) => ({
   user: state.entities.users[ownProps.match.params.userId],
@@ -9,7 +10,8 @@ const mSTP = ( state, ownProps ) => ({
 });
 
 const mDTP = dispatch => ({
-  requestUser: id => dispatch(requestUser(id))
+  requestUser: id => dispatch(requestUser(id)),
+  openModal: modal => dispatch(openModal(modal))
 });
 
 export default connect(mSTP,mDTP)(UserShow);

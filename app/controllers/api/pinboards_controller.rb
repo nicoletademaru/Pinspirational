@@ -37,7 +37,7 @@ class Api::PinboardsController < ApplicationController
   private 
 
   def pinboard_params
-    params.requre(:pinboard).permit(:id, :title, :user_id)
+    params.require(:pinboard).permit(:id, :title, :user_id)
   end
 
 end

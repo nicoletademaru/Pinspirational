@@ -1,0 +1,48 @@
+.pinboard > .modal-background > .modal-child {
+  width: 500px;
+}
+
+.pinboard-create {
+  height: 240px;
+  h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 40px 0 10px 37px;
+    font-size: 13px;
+    font-weight: 200;
+    color: rgb(96, 96, 96);
+  }
+
+  input { 
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    width: 85%;
+    height: 40px;
+    margin-left: 32px;
+  }
+
+  .pinboard-title {
+    font-size: 15px;
+    padding-left: 10px;
+  }
+}
+
+.create-pinboard-button {
+  float: right;
+  background-color: #DD011B;
+  color: white;
+  font-size: 16px;
+  font-weight: 650;
+  border-radius: 20px;
+  padding: 11px;
+  margin: 40px 30px 0 20px;
+}
+
+.create-pinboard-button:hover {
+  cursor: pointer;
+}

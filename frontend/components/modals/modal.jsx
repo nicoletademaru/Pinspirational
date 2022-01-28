@@ -2,9 +2,10 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginContainer from '../sessions/login_container';
-import SignupContatiner from '../sessions/signup_contatiner';
+import SignupContainer from '../sessions/signup_contatiner';
 import EditPinContainer from '../pins/edit_pin_container';
-import { updatePin } from '../../util/pin_api_util';
+import CreatePinboardContainer from '../pinboards/create_pinboard_container'
+import EditPinboardContainer from '../pinboards/edit_pinboard_container'
 
 function Modal({ modal, closeModal}) {
   if (!modal) {
@@ -19,7 +20,15 @@ function Modal({ modal, closeModal}) {
       break;
     case 'signup':
       type = 'signup'
-      component = <SignupContatiner />;
+      component = <SignupContainer />;
+      break;
+    case 'pinboard':
+      type = 'pinboard'
+      component = <CreatePinboardContainer />;
+      break;
+    case 'edit-pinboard':
+      type = 'edit-pinboard'
+      component = <EditPinboardContainer />;
       break;
     case 'edit-pin':
       type = 'edit-pin'
