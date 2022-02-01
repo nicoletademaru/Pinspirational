@@ -15,10 +15,28 @@ figure {
     width: 100%;
     margin-top: -10px;
     border-radius: 15px;
+    z-index: -1;
+    position: relative;
   }
 
   figcaption {
     font-size: 12px;
     font-weight: 550;
   }
+}
+
+.pin-save {
+  display: none;
+}
+
+figure:hover + .pin-save {
+  display: block;  
+  background-color: #DD011B;
+  color: white;
+  font-size: 16px;
+  font-weight: 650;
+  border-radius: 20px;
+  padding: 11px;
+  position: absolute;
+  margin: 20px 0 0 225px;
 }

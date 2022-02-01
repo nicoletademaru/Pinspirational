@@ -26,7 +26,6 @@ class EditPinboard extends React.Component {
     this.props.deletePinboard(this.props.pinboard.id)      
       .then(this.props.closeModal)
       .then(this.props.history.push(`/users/${this.props.userId}/pinboards`))
-
   }
             
   render() {
@@ -58,7 +57,7 @@ class EditPinboard extends React.Component {
           <div className='right-footer'>
             <button 
               className='delete-cancel' onClick={closeModal}>Cancel</button>
-            <button className='save' type='submit' onClick={this.handleSubmit}>Save</button>
+            <button className='save-pinboard-edit' type='submit' onClick={this.handleSubmit}>Save</button>
           </div>
         </div>
       </div>

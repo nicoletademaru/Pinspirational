@@ -9,7 +9,10 @@ class PinIndexItem extends React.Component {
     const { pin, handleClick } = this.props;
     return (
       <div className='pin-index-item'>
-        <figure>
+        <div className='pin-save'>
+          <button>Save</button>
+        </div>
+        <figure className='hover-test'>
           <img
             key={pin.id}
             id={pin.id}

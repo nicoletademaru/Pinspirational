@@ -32,7 +32,6 @@ class PinShow extends React.Component {
               <div className='pin-details'>
                 <h1>{pin.title}</h1>
                 <p>{pin.description}</p>
-                
               </div>
               <div className='pin-owner-info'>
                 <UserInfo user={users[pin.author_id]} />

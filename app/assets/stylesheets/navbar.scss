@@ -67,12 +67,12 @@
   height: 40px;
   float: left;
   img {
-  position: relative;
-  float: left;
-  left: 25%;
-  width: 30px;
-  border-radius: 50%;
-  margin: 5px 0 0 -5px;
+    position: relative;
+    float: left;
+    left: 25%;
+    width: 30px;
+    border-radius: 50%;
+    margin: 5px 0 0 -5px;
   }
 }
 
@@ -134,3 +134,12 @@
   background-color: rgb(32, 178, 170);
   color: white;
 }
+
+.user-shortcut {
+  img {
+    float:left;
+    border-radius: 50%;
+    width: 50px;
+    margin: 10px;
+  }
+} 
