@@ -36,6 +36,14 @@ export const createPinboard = pinboard => dispatch => {
   )
 };
 
+export const updatePinboard = pinboard => dispatch => {
+  console.log(pinboard)
+  return (
+  PinboardApiUtil.updatePinboard(pinboard) 
+    .then(pinboard => dispatch(receivePinboard(pinboard)))
+  )
+};
+
 export const deletePinboard = pinboardId => dispatch => (
   PinboardApiUtil.deletePinboard(pinboardId)
     .then(() => dispatch(removePinboard(pinboardId)))

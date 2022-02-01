@@ -21,14 +21,18 @@ class PinboardShow extends React.Component {
       return ""
     }
     
-    const { pinboard, pins } = this.props;
-    console.log(pinboard.id)
+    const { pinboard, pins, sessionId, openModal } = this.props;
+    
     return (
       <div className='pinboard-show-page'>
         <div className='pinboard-info'>
           <h1>{this.props.pinboard.title}</h1>
           <p>{pins.length} Pins</p>
         </div>
+        <div className='pinboard-edit'>
+            {sessionId == pinboard.user_id ?
+                <button onClick={()=> openModal('edit-pinboard')}>Edit</button> : "" }
+            </div>
         <div className='index-page-listings'>
           <ul>
             { pins.map((pin) => (

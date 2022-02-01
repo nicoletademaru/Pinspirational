@@ -11,6 +11,14 @@ export const createPinboard = pinboard => (
     url: '/api/pinboards',
     data: { pinboard },
   })
+) 
+
+export const updatePinboard = pinboard => (
+  $.ajax({
+    method: 'PATCH',
+    url: `/api/pinboards/${pinboard.id}`,
+    data: { pinboard },
+  })
 )
 
 export const fetchPinboard = pinboardId => (

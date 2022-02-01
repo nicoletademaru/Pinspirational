@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { openModal, closeModal } from "../../actions/modal_actions";
-import { deletePinboard } from '../../actions/pinboard_actions';
+import { deletePinboard, updatePinboard, requestPinboard } from '../../actions/pinboard_actions';
 import EditPinboard from './edit_pinboard_form';
 
 const mSTP = (state, ownProps) => {
@@ -14,6 +14,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => ({ 
   deletePinboard: pinboardId => dispatch(deletePinboard(pinboardId)),
+  updatePinboard: pinboard => dispatch(updatePinboard(pinboard)),
+  requestPinboard: pinboardId => dispatch(requestPinboard(pinboardId)),
   openModal: modal => dispatch(openModal(modal)),
   closeModal: () => dispatch(closeModal()),
 })

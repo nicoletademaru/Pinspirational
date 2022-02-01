@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     end
 
     resources :pins, only: [:create, :show, :index, :update, :destroy]
-    resources :pinboards, only: [:create, :destroy]
+    resources :pinboards, only: [:create, :update, :destroy]
     resources :pinboards, only: [:show] do
       resources :pinnings, only: [:index]
     end

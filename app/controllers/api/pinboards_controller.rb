@@ -24,14 +24,23 @@ class Api::PinboardsController < ApplicationController
     render :show
   end
 
+  def update 
+    @pinboard = Pinboard.find(params[:id])
+    if current_user.id == @pinboard.user_id && @pinboard.update(pinboard_params)
+      render :show
+    else
+      render :edit
+    end
+  end
 
   def destroy 
     @pinboard = Pinboard.find(params[:id])
     if @pinboard.destroy
       @pinboards = Pin.all
-      render :index
+
+      render "api/users/show"
     else 
-      render json: ['Cannot destroy pin']
+      render json: ['Cannot delete pinboard']
     end
   end
   private 

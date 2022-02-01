@@ -17,8 +17,6 @@ class UserShow extends React.Component {
 
   handleClick(e) {
     e.preventDefault;
-    debugger
-    console.log(e.target)
     this.props.history.push(`/pinboards/${e.target.id}/pinnings`)
   }
 

@@ -15,22 +15,16 @@ class EditPinboard extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let formData = new FormData();
+    const pinboard = Object.assign({}, this.state);
 
-    formData.append('pin[id]', this.props.pin.id)
-    formData.append('pin[title]', this.state.title)
-    formData.append('pin[description]', this.state.description)
-    formData.append('pin[pinboard_id]', 1)
-
-    this.props.updatePin(formData)
+    this.props.updatePinboard(pinboard)
+      .then(this.props.requestPinboard(pinboard.id))
       .then(this.props.closeModal)
-      .then(window.location.reload());
   }
 
   handleDelete() {
     this.props.deletePinboard(this.props.pinboard.id)
       .then(this.props.closeModal)
-      .then(this.props.history.push(`/users/${this.props.userId}/pinboards`));
   }
             
   render() {
