@@ -23,8 +23,10 @@ class EditPinboard extends React.Component {
   }
 
   handleDelete() {
-    this.props.deletePinboard(this.props.pinboard.id)
+    this.props.deletePinboard(this.props.pinboard.id)      
       .then(this.props.closeModal)
+      .then(this.props.history.push(`/users/${this.props.userId}/pinboards`))
+
   }
             
   render() {

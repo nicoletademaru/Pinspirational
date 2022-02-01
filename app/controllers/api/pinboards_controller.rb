@@ -36,8 +36,9 @@ class Api::PinboardsController < ApplicationController
   def destroy 
     @pinboard = Pinboard.find(params[:id])
     if @pinboard.destroy
-      @pinboards = Pin.all
-
+      @pinboards = Pinboard.where(user_id: params[:user_id])
+      @user = User.find(current_user.id)
+    
       render "api/users/show"
     else 
       render json: ['Cannot delete pinboard']
