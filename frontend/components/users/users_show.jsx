@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PinboardItem from './user_pinboard_item';
 
 class UserShow extends React.Component {
@@ -33,15 +34,21 @@ class UserShow extends React.Component {
           <img src={this.props.user.profile_pic} alt="profile_pic" />
           <h1>{this.props.user.username}</h1>
         </div>
-        <div>
-            <img className='plus-img'
-              src={plusUrl}
-              onClick={this.createPin}
-            />
-            <img className='plus-img' 
-              src={plusUrl} 
-              onClick={()=> openModal('pinboard')}/>
+        <div className='dropdown add-item-dropdown'>
+          <div className='dropdown-container'>
+            <img className='dropdown-btn plus-img' src={plusUrl}/>
           </div>
+          <div className='dropdown-content create-content'>
+            <h1>Create</h1>
+            <Link className='drop-item create-item' to={'/pins'}>
+              <p>Pin</p>
+            </Link>
+            <div>
+              <p className='drop-item create-item'onClick={()=> openModal('pinboard')}>Board</p>
+            </div>
+            <div className='bottom'></div>
+          </div>
+        </div>
         <div className='pinboard-items'>
           <ul>
             { pinboards.map((pinboard) => 

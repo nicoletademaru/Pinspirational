@@ -1,39 +1,33 @@
 .create-pin {
   background-color: #EAEBEA;
   width: 100%;
-  margin-top: 63px;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow: auto;
+  height: 100%;
   position: fixed;
 
   p {
     position: fixed;
-    top: 18%;
     left: 50%;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
-    margin-left: -340px;
+    margin: 30px 0 0 -340px;
     padding-bottom: 5px;
     border-bottom: 3px solid black;
   }
 }
 
 .create-pin-form {
-  position: relative;
+  position: fixed;
   background-color: white;
   left: 50%;
   width: 700px;
   height: 520px;
-  margin: 100px 70px 50px -350px;
+  margin: 80px 70px 50px -350px;
   border-radius: 20px 20px 20px 20px;
 }
 
 .form-body {
   display: flex;
-  margin-top: 115px;
+  margin-top: 5px;
   padding-top: 80px;
 }
 
