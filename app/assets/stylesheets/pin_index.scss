@@ -25,7 +25,7 @@ figure {
 }
 
 .create-pinning-form {
-  // display:none;
+  display:none;
   position: absolute;
   width: 100%;
 
@@ -33,16 +33,23 @@ figure {
     float: left;
     position: relative;
     color: white;
-    margin: 9px 0 0 20px;
+    width: 45%;
+    margin: 9px 0 0 15px;
+    font-weight: 650;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 }
 
-.test-container {
+.form-container {
   width: 100%;
   position: relative;
 }
 
 .save-pin {
+  cursor: pointer;
   position: relative;
   float: right;
   margin-right: 15px;
@@ -54,7 +61,39 @@ figure {
   padding: 11px;
 }
 
-figure:hover .create-pinning-form   {
+figure:hover .pin-img{
+  z-index: -1;
+  filter: brightness(80%);
+}
+
+figure:hover .create-pinning-form {
+  z-index: 1;
   display: block;
   cursor: pointer;
+}
+
+.down-arrow {
+  z-index: 1;
+  width: 30px;
+  margin-top: 2px;
+}
+
+.fa-chevron-down {
+  color: white;
+  margin-top: 10px;
+}
+
+.remove-pin {
+  cursor: pointer;
+  position: relative;
+  float: right;
+  margin-right: 15px;
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  font-weight: 650;
+  border-radius: 20px;
+  padding: 11px;
+  z-index: 1;
+  display: block;
 }

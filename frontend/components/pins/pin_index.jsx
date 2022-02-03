@@ -4,10 +4,6 @@ import PinIndexItem from './pin_item'
 class PinIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      pin_id: "",
-      pinboard_id:"",
-    }
 
     this.handleClick = this.handleClick.bind(this);
     this.handleSave = this.handleSave.bind(this);
@@ -20,7 +16,12 @@ class PinIndex extends React.Component {
 
   handleSave(e) {
     e.preventDefault();
-    return (e) => this.setState({ pin_id: e.target.id })
+    let pinning = {}
+    pinning["pin_id"] = e.target.id
+    pinning["pinboard_id"] = this.props.pinboards[0].id
+
+    this.props.createPinning(pinning)
+      .then(this.props.history.push('/feed'))
   }
 
   componentDidMount() {
@@ -32,7 +33,7 @@ class PinIndex extends React.Component {
   render() {
     if (!this.props.pins) return null;
     if (!this.props.pinboards) return null;
-    
+
     const  { pins, pinboards } =  this.props;
     return (
       <div className='index-page-listings'>

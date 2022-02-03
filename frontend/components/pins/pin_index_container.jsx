@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { requestPins } from '../../actions/pin_actions'
 import { requestUsers, requestUser } from "../../actions/users_actions";
+import { createPinning } from "../../actions/pinning_actions";
 
 const mSTP = state => ({
   pins: Object.keys(state.entities.pins).map(key => state.entities.pins[key]),
@@ -14,6 +15,7 @@ const mDTP = dispatch => ({
   requestPins: () => dispatch(requestPins()),
   requestUsers: () => dispatch(requestUsers()),
   requestUser: id => dispatch(requestUser(id)),
+  createPinning: pinning => dispatch(createPinning(pinning)),
 })
 
 export default withRouter(connect(mSTP,mDTP)(PinIndex))

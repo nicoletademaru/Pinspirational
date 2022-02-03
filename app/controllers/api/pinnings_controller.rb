@@ -1,7 +1,6 @@
 class Api::PinningsController < ApplicationController
   def create 
-    @pinning = Pinning.new(pinning_params)
-
+    @pinning = Pinning.new(pinnings_params)
     if @pinning.save 
       render :show
     else

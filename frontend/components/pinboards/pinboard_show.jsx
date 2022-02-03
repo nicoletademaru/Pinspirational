@@ -5,11 +5,18 @@ class PinboardShow extends React.Component {
   constructor(props) {
     super(props)
     this.handleClick = this.handleClick.bind(this);
+    this.handleRemove = this.handleRemove.bind(this);
   }
 
   handleClick(e) {
     e.preventDefault();
     this.props.history.push(`/pins/${e.target.id}`);
+  }
+
+  handleRemove(e) {
+    e.preventDefault();
+
+    this.props.deletePinning(e.target.id)
   }
 
   componentDidMount() {
@@ -22,7 +29,8 @@ class PinboardShow extends React.Component {
     }
     
     const { pinboard, pins, sessionId, openModal } = this.props;
-    
+    let pinboards = [];
+    console.log(pins)
     return (
       <div className='pinboard-show-page'>
         <div className='pinboard-info'>
@@ -30,9 +38,9 @@ class PinboardShow extends React.Component {
           <p>{pins.length} Pins</p>
         </div>
         <div className='pinboard-edit'>
-            {sessionId == pinboard.user_id ?
-                <button onClick={()=> openModal('edit-pinboard')}>Edit</button> : "" }
-            </div>
+          {sessionId == pinboard.user_id ?
+            <button onClick={()=> openModal('edit-pinboard')}>Edit</button> : "" }
+        </div>
         <div className='index-page-listings'>
           <ul>
             { pins.map((pin) => (
@@ -40,6 +48,8 @@ class PinboardShow extends React.Component {
                 key={pin.id}
                 pin={pin}
                 handleClick={this.handleClick}
+                handleRemove={this.handleRemove}
+                pinboards={pinboards}
               /> )
             )}
           </ul>

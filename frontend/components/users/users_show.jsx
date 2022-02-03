@@ -55,7 +55,8 @@ class UserShow extends React.Component {
               <PinboardItem 
                 key={pinboard.id}
                 pinboard={pinboard}
-                handleClick={this.handleClick}/>
+                handleClick={this.handleClick}
+                pinboards={this.props.pinboards}/>
             )}
           </ul>
         </div>
