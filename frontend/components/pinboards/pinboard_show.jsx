@@ -27,10 +27,13 @@ class PinboardShow extends React.Component {
     if (!this.props.pinboard) {
       return ""
     }
+    if (!this.props.pins) {
+      return ""
+    }
     
     const { pinboard, pins, sessionId, openModal } = this.props;
     let pinboards = [];
-    console.log(pins)
+
     return (
       <div className='pinboard-show-page'>
         <div className='pinboard-info'>

@@ -37,7 +37,6 @@ export const createPinboard = pinboard => dispatch => {
 };
 
 export const updatePinboard = pinboard => dispatch => {
-  console.log(pinboard)
   return (
   PinboardApiUtil.updatePinboard(pinboard) 
     .then(pinboard => dispatch(receivePinboard(pinboard)))

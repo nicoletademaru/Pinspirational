@@ -84,9 +84,10 @@ figure:hover .create-pinning-form {
 }
 
 .remove-pin {
+  display: none;
   cursor: pointer;
-  position: relative;
-  float: right;
+  position: absolute;
+  right: 0;
   margin-right: 15px;
   background-color: #f1f1f1;
   color: black;
@@ -95,5 +96,10 @@ figure:hover .create-pinning-form {
   border-radius: 20px;
   padding: 11px;
   z-index: 1;
+}
+
+figure:hover .remove-pin {
+  z-index: 1;
   display: block;
+  cursor: pointer;
 }

@@ -5,7 +5,7 @@ end
 json.pinnings do
   if @pinnings
     @pinnings.each do |pinning|
-      json.set! pinning.id do 
+      json.set! pinning.pin_id do 
         @pin = Pin.find(pinning.pin_id)
         json.pinning pinning.id
         json.set! json.partial! "/api/pins/pin", pin: @pin

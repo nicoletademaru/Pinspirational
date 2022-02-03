@@ -20,8 +20,10 @@ class PinIndex extends React.Component {
     pinning["pin_id"] = e.target.id
     pinning["pinboard_id"] = this.props.pinboards[0].id
 
+    let ele = document.getElementById(e.target.id) 
+    ele.innerHTML = "Saved"
+    ele.style.backgroundColor ='black'
     this.props.createPinning(pinning)
-      .then(this.props.history.push('/feed'))
   }
 
   componentDidMount() {
