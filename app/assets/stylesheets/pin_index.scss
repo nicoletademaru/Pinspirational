@@ -24,10 +24,28 @@ figure {
   }
 }
 
-.save-pin {
-  display: none;
+.create-pinning-form {
+  // display:none;
   position: absolute;
-  margin-left: 185px;
+  width: 100%;
+
+  h1 {
+    float: left;
+    position: relative;
+    color: white;
+    margin: 9px 0 0 20px;
+  }
+}
+
+.test-container {
+  width: 100%;
+  position: relative;
+}
+
+.save-pin {
+  position: relative;
+  float: right;
+  margin-right: 15px;
   color: white;
   background-color: #DC011B;
   font-size: 16px;
@@ -36,7 +54,7 @@ figure {
   padding: 11px;
 }
 
-figure:hover .save-pin {
+figure:hover .create-pinning-form   {
   display: block;
   cursor: pointer;
 }
