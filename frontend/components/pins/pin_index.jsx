@@ -7,6 +7,7 @@ class PinIndex extends React.Component {
 
     this.handleClick = this.handleClick.bind(this);
     this.handleSave = this.handleSave.bind(this);
+    this.handlePinning = this.handlePinning.bind(this);
   };
 
   handleClick(e) {
@@ -21,6 +22,19 @@ class PinIndex extends React.Component {
     pinning["pinboard_id"] = this.props.pinboards[0].id
 
     let ele = document.getElementById(e.target.id) 
+    ele.innerHTML = "Saved"
+    ele.style.backgroundColor ='black'
+    this.props.createPinning(pinning)
+  }
+
+  handlePinning(e) {
+    e.preventDefault();
+
+    let pinning = {}
+    pinning["pin_id"] = e.target.getAttribute('pin')
+    pinning["pinboard_id"] = e.target.id
+
+    let ele = document.getElementById(e.target.getAttribute('pin')) 
     ele.innerHTML = "Saved"
     ele.style.backgroundColor ='black'
     this.props.createPinning(pinning)
@@ -47,6 +61,7 @@ class PinIndex extends React.Component {
             pinboards={pinboards}
             handleClick={this.handleClick}
             handleSave={this.handleSave}
+            handlePinning={this.handlePinning}
           /> )
           )}
         </ul>

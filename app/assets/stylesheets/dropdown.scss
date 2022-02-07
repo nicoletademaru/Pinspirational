@@ -15,6 +15,7 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
+  max-height: max-content;
   max-height: 100vh;
   transition: max-height 1s
 }
