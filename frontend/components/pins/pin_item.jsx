@@ -15,9 +15,21 @@ class PinIndexItem extends React.Component {
         <figure>
           <div className='form-container'>
           { pinboards.length > 0 ?
+          
           <form className='create-pinning-form'>
-            <h1 className='pinboard-pinning'>{pinboards[0].title}</h1> 
-            <i className="fas fa-chevron-down"></i>
+            <div className='dropdown'>
+              <h1 className='dropdown-btn pinboard-pinning'>{pinboards[0].title}</h1> 
+              <i className="fas fa-chevron-down"></i>
+              <div className='dropdown-content create-content'>
+                <h2>Save to pinboard</h2>
+                <h1>All pinboards</h1>
+                <div>
+                  <p className='drop-item create-item'onClick={()=> openModal('pinboard')}>Board</p>
+                </div>
+                <div className='bottom'></div>
+              </div>
+            </div>
+
             <button 
               onClick={handleSave}
               className='save-pin'

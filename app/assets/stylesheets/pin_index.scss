@@ -25,22 +25,22 @@ figure {
 }
 
 .create-pinning-form {
-  display:none;
+  // display:none;
   position: absolute;
   width: 100%;
+}
 
-  h1 {
-    float: left;
-    position: relative;
-    color: white;
-    width: 45%;
-    margin: 9px 0 0 15px;
-    font-weight: 650;
-    font-size: 17px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
+.pinboard-pinning {
+  float: left;
+  position: relative;
+  color: white;
+  width: 80%;
+  margin: 9px 0 0 15px;
+  font-weight: 650;
+  font-size: 17px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .form-container {
