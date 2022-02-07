@@ -4,6 +4,9 @@ import PinIndexItem from '../pins/pin_item';
 class PinboardShow extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      rerenderPlease: false
+    }
     this.handleClick = this.handleClick.bind(this);
     this.handleRemove = this.handleRemove.bind(this);
   }
@@ -17,6 +20,7 @@ class PinboardShow extends React.Component {
     e.preventDefault();
 
     this.props.deletePinning(e.target.id)
+      .then(() => this.setState({ rerenderPlease: !this.state.rerenderPlease }))
   }
 
   componentDidMount() {
@@ -24,10 +28,7 @@ class PinboardShow extends React.Component {
   }
 
   render() {
-    if (!this.props.pinboard) {
-      return ""
-    }
-    if (!this.props.pins) {
+    if (!this.props.pinboard && !this.props.pin) {
       return ""
     }
     

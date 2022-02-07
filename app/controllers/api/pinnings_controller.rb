@@ -25,8 +25,9 @@ class Api::PinningsController < ApplicationController
 
   def destroy 
     @pinning = Pinning.find(params[:id])
-    if @pinning.destroy
 
+    if @pinning.destroy
+      render :show
     else 
       render json: ['Cannot destroy pin']
     end
