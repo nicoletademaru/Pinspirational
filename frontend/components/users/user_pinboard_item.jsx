@@ -22,7 +22,7 @@ class PinboardItem extends React.Component {
           <div className='right-photos'>
             <div className='right-photo'>
               <img 
-                className={pins.length > 1 ? 'pinboard-img' : '' }
+                className={pins.length > 1 ? 'pinboard-img' : '.grey-img' }
                 src= {pins.length > 1 ? pins[1].photoUrl : greyImg }
                 alt="photo"
                 id={pinboard.id}
@@ -30,7 +30,7 @@ class PinboardItem extends React.Component {
             </div>
             <div className='right-photo bottom-photo'>
               <img
-                className={pins.length > 1 ? 'pinboard-img' : '' }
+                className={pins.length > 2 ? 'pinboard-img' : '.grey-img' }
                 src= {pins.length > 2 ? pins[2].photoUrl : greyImg }
                 alt="photo"
                 id={pinboard.id}

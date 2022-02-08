@@ -46,18 +46,21 @@ class EditPinboard extends React.Component {
                 onChange={this.handleChange('title')}
               />
             </label>
+            <label htmlFor='delete'>Action</label>
+            <h1 
+              className='delete' 
+              onClick={this.handleDelete}>Delete Board</h1>
+              <p>Delete this Pinboard and all its Pins forever.</p>
+              <p>You can't undo this!</p>
           </form>
         </div>
         <div className='edit-pinboard-footer'>
           <div className='left-footer'>
-            <button 
-              className='delete-cancel' 
-              onClick={this.handleDelete}>Delete</button>
           </div>
           <div className='right-footer'>
-            <button 
-              className='delete-cancel' onClick={closeModal}>Cancel</button>
-            <button className='save-pinboard-edit' type='submit' onClick={this.handleSubmit}>Save</button>
+            {/* <button 
+              className='delete-cancel' onClick={closeModal}>Cancel</button> */}
+            <button className='save-pinboard-edit' type='submit' onClick={this.handleSubmit}>Done</button>
           </div>
         </div>
       </div>

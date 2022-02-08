@@ -1,7 +1,6 @@
 .pinboard-items {
   float: left;
   width: 100%;
-  // columns: 250px;
   padding: 20px 80px 50px 80px;
 }
 
@@ -24,9 +23,10 @@
   width: 49.5%;
 
   img {
-      max-width: 100%;
-      height: auto;
-    }
+    max-width: 100%;
+    // height: auto;
+  }
+
   .pinboard-img {
     margin-top: -30%;
   }
@@ -42,5 +42,4 @@
     border-radius: 0 0 15px 0;
     margin-top: 2px;
   }
-  
 }

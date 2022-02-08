@@ -1,8 +1,28 @@
-.pinboard-info {
-  text-align: center;
+.pinboard-show-page {
   margin-top: 50px;
   h1 {
+    text-align: center;
     font-size: 40px;
     font-weight: 800;
+    margin-bottom: 50px;
+  }
+}
+
+.pinboard-info {
+  margin: 0 40px 0 40px;
+  height: 5px;
+  font-size: 18px;
+  font-weight: 600;
+
+  p {
+    float: left;
+  }
+
+  .pinboard-edit {
+    float: right;
+
+    i {
+      cursor: pointer;
+    }
   }
 }

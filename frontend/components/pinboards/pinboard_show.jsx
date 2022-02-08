@@ -37,13 +37,14 @@ class PinboardShow extends React.Component {
 
     return (
       <div className='pinboard-show-page'>
+        <h1>{this.props.pinboard.title}</h1>
         <div className='pinboard-info'>
-          <h1>{this.props.pinboard.title}</h1>
           <p>{pins.length} Pins</p>
-        </div>
-        <div className='pinboard-edit'>
-          {sessionId == pinboard.user_id ?
-            <button onClick={()=> openModal('edit-pinboard')}>Edit</button> : "" }
+          <div className='pinboard-edit'>
+            {sessionId == pinboard.user_id ?
+              <i className="fas fa-edit" onClick={()=> openModal('edit-pinboard')}></i>
+              : "" }
+          </div>
         </div>
         <div className='index-page-listings'>
           <ul>
