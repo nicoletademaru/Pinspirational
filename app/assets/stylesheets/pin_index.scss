@@ -1,14 +1,33 @@
 .index-page-listings {
-  column-width: 230px;
+  columns: 250px;
   column-gap: 10px;
   margin: 20px 40px 40px 40px;
+
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // width: 100%;
+  // justify-content: center;
+  // align-items: flex-start;
+  // right: 0;
+  // display: -ms-flexbox;
+	// -ms-flex-direction: column;
+	// -ms-flex-wrap: wrap;
+	// display: flex;
+	// flex-direction: column;
+	// flex-wrap: wrap;
+	// height: 250vw;
+  // width:100vw;
 }
 
 
 figure {
-  margin: 10px 0 20px 0;
+  margin: 30px 5px 10px 5px;
   width: 100%;
   display: inline-block;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0);
 
   img {
     width: 100%;

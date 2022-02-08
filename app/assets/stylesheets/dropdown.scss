@@ -9,14 +9,13 @@
   right: 0;
   left: auto;
   text-align: right;
-  margin-top: 31px;
+  margin-top: 20px;
   transition: max-height .5s ease-out;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
-  max-height: max-content;
-  // max-height: 100vh;
+  max-height: 100vh;
   transition: max-height 1s
 }
 
