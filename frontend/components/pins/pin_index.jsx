@@ -54,18 +54,17 @@ class PinIndex extends React.Component {
     const  { pins, pinboards } =  this.props;
     return (
       <div className='index-page-listings'>
-        <ul>
-          { pins.map((pin) => (
-          <PinIndexItem 
-            key={pin.id} 
-            pin={pin}
-            pinboards={pinboards}
-            handleClick={this.handleClick}
-            handleSave={this.handleSave}
-            handlePinning={this.handlePinning}
-          /> )
-          )}
-        </ul>
+        { pins.map((pin) => (
+        <PinIndexItem 
+          className='index-page-item'
+          key={pin.id} 
+          pin={pin}
+          pinboards={pinboards}
+          handleClick={this.handleClick}
+          handleSave={this.handleSave}
+          handlePinning={this.handlePinning}
+        /> )
+        )}
       </div>
     )
   }

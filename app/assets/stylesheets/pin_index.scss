@@ -1,13 +1,12 @@
 .index-page-listings {
-  margin: 40px 80px 30px 0px;
-  columns: 220px;
+  column-width: 230px;
+  column-gap: 10px;
+  margin: 20px 40px 40px 40px;
 }
 
-.pin-index-item {
-  margin-bottom: 10px;
-}
 
 figure {
+  margin: 10px 0 20px 0;
   width: 100%;
   display: inline-block;
 
