@@ -1,19 +1,23 @@
 import React from 'react';
 
 function PinningDropdown({pinboards, handlePinning, pin}) {
-
-  return <div className='dropdown'>
+  if (!pinboards) return null;
+  return <div className='dropdown pinning-dropdown'>
   <h1 className='dropdown-btn pinboard-pinning'>{pinboards[0].title}</h1> 
   <i className="fas fa-chevron-down"></i>
-  <div className='dropdown-content create-content'>
+  <div className='dropdown-content pinning-content'>
     <h2>Save to pinboard</h2>
-    <h1>All pinboards</h1>
-    <ul>
-      {pinboards.map((pinboard, idx) => {
-        return <p key={idx} id={pinboard.id} pin={pin} onClick={handlePinning}>{pinboard.title}</p>
-      })}
-    </ul>
-    <div className='bottom'></div>
+    <div className='pinboard-options'>
+      <h1>All pinboards</h1>
+      <ul>
+        {pinboards.map((pinboard, idx) => {
+          return <div className='drop-item pinning-item' key={idx} onClick={(e) => handlePinning(e, pinboard.id, pin)} >
+            <p>{pinboard.title}</p>
+            <button id={""+pinboard.id+pin} className='save-btn'>Save</button>
+          </div>
+        })}
+      </ul>
+    </div>
   </div>
 </div>
 }

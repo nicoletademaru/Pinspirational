@@ -1,0 +1,51 @@
+.pinboard-pinning {
+  float: left;
+  position: relative;
+  color: white;
+  width: 80%;
+  margin: 9px 0 0 15px;
+  font-weight: 650;
+  font-size: 17px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.pinning-content {
+  text-align: left;
+  width: 90%;
+  right:5%;
+  border-radius: 20px;
+  h2 {
+    text-align: center;
+    margin: 25px 0 15px 0;
+    font-weight: 800;
+    font-size: 17px;
+  }
+}
+
+.pinboard-options {
+  margin: 10px;
+  h1 {
+    margin-left: 5px;
+    font-size: 13px;
+    font-weight: 100;
+    color: rgb(61, 61, 61);
+  }
+}
+
+.pinning-item {
+  padding: 13px 0px 13px 5px;
+  z-index: 9999;
+  button {
+    display: none;
+  }
+}
+
+.pinning-item:hover button {
+  display: block;
+  position: absolute;
+  right: 0;
+  padding:7px;
+  z-index: 1;
+}

@@ -27,14 +27,15 @@ class PinIndex extends React.Component {
     this.props.createPinning(pinning)
   }
 
-  handlePinning(e) {
+  handlePinning(e, pinboard, pin) {
     e.preventDefault();
 
     let pinning = {}
-    pinning["pin_id"] = e.target.getAttribute('pin')
-    pinning["pinboard_id"] = e.target.id
+    pinning["pin_id"] = pin;
+    pinning["pinboard_id"] = pinboard;
+    let btnId = ""+pinboard+pin
 
-    let ele = document.getElementById(e.target.getAttribute('pin')) 
+    let ele = document.getElementById(btnId)
     ele.innerHTML = "Saved"
     ele.style.backgroundColor ='black'
     this.props.createPinning(pinning)

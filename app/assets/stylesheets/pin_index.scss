@@ -25,22 +25,9 @@ figure {
 }
 
 .create-pinning-form {
-  // display:none;
+  display:none;
   position: absolute;
   width: 100%;
-}
-
-.pinboard-pinning {
-  float: left;
-  position: relative;
-  color: white;
-  width: 80%;
-  margin: 9px 0 0 15px;
-  font-weight: 650;
-  font-size: 17px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .form-container {
@@ -48,7 +35,7 @@ figure {
   position: relative;
 }
 
-.save-pin {
+.save-btn {
   cursor: pointer;
   position: relative;
   float: right;
@@ -99,6 +86,12 @@ figure:hover .create-pinning-form {
 }
 
 figure:hover .remove-pin {
+  z-index: 1;
+  display: block;
+  cursor: pointer;
+}
+
+figure:hover .pinning-drop-btn {
   z-index: 1;
   display: block;
   cursor: pointer;
