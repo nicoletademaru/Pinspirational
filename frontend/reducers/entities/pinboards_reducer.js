@@ -1,5 +1,5 @@
 import { RECEIVE_BOARD, REMOVE_BOARD } from "../../actions/pinboard_actions";
-import { RECEIVE_USER } from "../../actions/users_actions";
+import { RECEIVE_ALL_USERS, RECEIVE_USER } from "../../actions/users_actions";
 
 const PinboardsReducer = (state = {}, action) => {
   Object.freeze(state);

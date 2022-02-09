@@ -1,14 +1,15 @@
+// Styling for pin index page 
 .pinboard-pinning {
-  float: left;
-  position: relative;
-  color: white;
-  width: 80%;
-  margin: 9px 0 0 15px;
-  font-weight: 650;
-  font-size: 17px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+float: left;
+position: relative;
+color: white;
+width: 80%;
+margin: 9px 0 0 15px;
+font-weight: 650;
+font-size: 17px;
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
 }
 
 .pinning-content {
@@ -48,4 +49,30 @@
   right: 0;
   padding:7px;
   z-index: 1;
+}
+
+
+// Styling for pin show page 
+
+.pin-show-pinning {
+  .create-pinning-form {
+    float: right;
+    margin: 20px 10px;
+  }
+
+  .pinboard-pinning {
+    color:black;
+  }
+
+  .fa-chevron-down {
+    color:black;
+  }
+
+  .save-btn {
+    margin-left: 15px;
+  }
+
+  .pinning-content {
+    width: 40%;
+  }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import PinningDropdown from './pinning_dropdown'
+import PinningForm from './pinning_create';
 
 class PinIndexItem extends React.Component {
   constructor(props) {
@@ -15,13 +15,12 @@ class PinIndexItem extends React.Component {
       <div className='pin-index-item'>
         <figure>
           <div className='form-container'>{ pinboards.length > 0 ?
-          <form className='create-pinning-form'>
-            <PinningDropdown
-              pin={pin.id}
+            <PinningForm
+              pinId={pin.id}
               pinboards={pinboards}
-              handlePinning={handlePinning}/>
-            <button id={pin.id} onClick={handleSave} className='save-btn'>Save</button>
-          </form> : 
+              handlePinning={handlePinning}
+              handleSave={handleSave}/>
+            : 
           <button id={pin.pinning} onClick={handleRemove} className='remove-pin'>Remove</button> }
           </div>
           <img className='pin-img'

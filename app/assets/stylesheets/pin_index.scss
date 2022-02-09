@@ -26,15 +26,14 @@ figure {
   }
 }
 
-.create-pinning-form {
-  display:none;
-  position: absolute;
-  width: 100%;
-}
-
 .form-container {
   width: 100%;
   position: relative;
+  .create-pinning-form {
+    display:none;
+    position: absolute;
+    width: 100%;
+  }
 }
 
 .save-btn {
