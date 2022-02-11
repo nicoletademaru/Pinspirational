@@ -33,7 +33,6 @@ class SessionForm extends React.Component {
       .then(() => { this.setState({ errors: null }, this.props.closeModal())})
       .fail(res => {
         const elementPass = document.getElementById('password');
-        console.log(res)
         if (this.props.formType !== 'Signup' || res.errors.responseJSON.includes('Username has already been taken')) {
           const elementUser = document.getElementById('username');
           elementUser.style.borderColor = 'red';
@@ -96,6 +95,7 @@ class SessionForm extends React.Component {
               placeholder="Email" 
               value={this.state.email} 
               onChange={this.update('email')} /> }
+          { this.props.formType === 'Signup' ? this.renderErrors(1) : ""}
           <br/>
           <input 
               id='username'
@@ -103,7 +103,7 @@ class SessionForm extends React.Component {
               placeholder="Username" 
               value={this.state.username} 
               onChange={this.update('username')} />
-
+          { this.props.formType === 'Signup' ? this.renderErrors(0) : ""}
           <br/>
             <input 
               id="password"
@@ -111,9 +111,9 @@ class SessionForm extends React.Component {
               placeholder="Password" 
               value={this.state.password} 
               onChange={this.update('password')} />
+              { this.props.formType !== 'Signup' ? this.renderErrors(0) : this.renderErrors(2)}
           <br/>
           <button type='submit'>{this.props.cta}</button>
-          {this.renderErrors(0)}
           <SessionFormFooter 
             handleDemo={this.handleDemo} 
             openModal={this.props.openModal} 
