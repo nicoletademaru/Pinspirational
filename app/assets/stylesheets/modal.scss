@@ -85,4 +85,13 @@
     color:black;
     border: 2px solid grey;
   }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.session-error {
+  font-size: 12px;
+  margin-left: 5px;
 }

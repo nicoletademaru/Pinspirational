@@ -13,7 +13,7 @@ class SessionForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleDemo = this.handleDemo.bind(this)
-    this.renderErrors = this.renderErrors.bind(this)
+    this.renderError = this.renderError.bind(this)
   }
 
   update(type) {
@@ -31,42 +31,32 @@ class SessionForm extends React.Component {
     const user = Object.assign({}, this.state);
     this.props.processForm(user)
       .then(() => { this.setState({ errors: null }, this.props.closeModal())})
+      .then(() => this.props.history.push('/feed'))
       .fail(res => {
-        const elementPass = document.getElementById('password');
-        if (this.props.formType !== 'Signup' || res.errors.responseJSON.includes('Username has already been taken')) {
-          const elementUser = document.getElementById('username');
-          elementUser.style.borderColor = 'red';
-        }
-        elementPass.style.borderColor = 'red';
         this.setState({ errors: res.errors.responseJSON })
       })
-      // .then(() => this.props.history.push('/feed'))
-      // .then(this.props.closeModal);
   }
 
-  renderErrors(idx) {
-    return (
-      // <ul>
-      //   {
-      //     Array.isArray(this.state.errors) ?
-      //       this.state.errors.map((error, i) => (
-      //         <li key={`error-${i}`}>
-      //           <p style={{color: 'red'}}>{error}</p>
-      //         </li>
-      //       )) :
-      //       ''
-      //   }
-      // </ul>
+  renderError(input) {
+    let displayError = "";
 
+    if (Array.isArray(this.state.errors)) 
+      this.state.errors.map((error) => (error.includes(input) ? displayError = error : ""))
+    
+    let eleId = input.toLowerCase();
+    if (this.props.formType === 'Signup' && displayError !== "") 
+      document.getElementById(eleId).style.borderColor = 'red'
+
+    if (this.props.formType === 'Login' && displayError !== "") {
+      document.getElementById('password').style.borderColor = 'red';
+      document.getElementById('username').style.borderColor = 'red';
+    }
+    
+    return (
       <ul>
-        {
-          Array.isArray(this.state.errors) ?
-            <li key={`error-${idx}`}>
-              <p style={{color: 'red'}}>{this.state.errors[idx]}</p>
-            </li>
-          :
-          ''
-        }
+        <li className='session-error' key={`error-${input}`}>
+          <p style={{color: 'red'}}>{displayError}</p>
+        </li>
       </ul>
     );
   }
@@ -83,6 +73,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    let { formType, openModal, cta } = this.props;
     return(
       <div className='modal-form'>
         <div className='session-header'>
@@ -90,12 +81,13 @@ class SessionForm extends React.Component {
           <h1>Welcome to Pinspiration</h1>
         </div>
         <form className='session-form' onSubmit={this.handleSubmit}>
-          { this.props.formType === 'Login' ? null : <input 
+          { formType === 'Login' ? null : <input 
+              id='email'
               type="text" 
               placeholder="Email" 
               value={this.state.email} 
               onChange={this.update('email')} /> }
-          { this.props.formType === 'Signup' ? this.renderErrors(1) : ""}
+            {this.renderError("Email")}
           <br/>
           <input 
               id='username'
@@ -103,7 +95,9 @@ class SessionForm extends React.Component {
               placeholder="Username" 
               value={this.state.username} 
               onChange={this.update('username')} />
-          { this.props.formType === 'Signup' ? this.renderErrors(0) : ""}
+
+          {this.renderError("Username")}
+
           <br/>
             <input 
               id="password"
@@ -111,17 +105,16 @@ class SessionForm extends React.Component {
               placeholder="Password" 
               value={this.state.password} 
               onChange={this.update('password')} />
-              { this.props.formType !== 'Signup' ? this.renderErrors(0) : this.renderErrors(2)}
+            {this.renderError("Password")}
+            {this.renderError("login")}
           <br/>
-          <button type='submit'>{this.props.cta}</button>
+          <button type='submit'>{cta}</button>
           <SessionFormFooter 
             handleDemo={this.handleDemo} 
-            openModal={this.props.openModal} 
-            formType={this.props.formType} 
+            openModal={openModal} 
+            formType={formType} 
           />
         </form>
-        {/* <ul> {Array.isArray(this.props.errors) ? this.props.errors.map((error,i) => 
-        <li key={i}>{error}</li>) : "" } </ul> */}
       </div>
     )
   }

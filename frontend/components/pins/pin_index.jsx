@@ -48,8 +48,7 @@ class PinIndex extends React.Component {
   }
 
   render() {
-    if (!this.props.pins) return null;
-    if (!this.props.pinboards) return null;
+    if (this.props.pins.length === 0) return null;
 
     const  { pins, pinboards } =  this.props;
     return (
