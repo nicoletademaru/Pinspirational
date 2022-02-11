@@ -38,11 +38,13 @@ class EditPin extends React.Component {
 
     return (
       <div className='edit-pin-page'>
-        <div className='edit-form-header'>
-          <h1>Edit this pin</h1>
-        </div>
         <div className='edit-form-body'>
+          <div className="edit-form-left">
+            <div className='edit-form-header'>
+            <h1>Edit this pin</h1>
+          </div>
           <form className='edit-form-details'>
+            <div className='form-input-item'>
             <label htmlFor="title">Title
               <input
                 name='title'
@@ -50,8 +52,10 @@ class EditPin extends React.Component {
                 value={this.state.title}
                 onChange={this.handleChange('title')}
               />
-            </label>
+            </label>              
+            </div>
             <br />
+            <div className='form-input-item'>
             <label htmlFor="description">Description
               <input
                 name='description'
@@ -60,10 +64,9 @@ class EditPin extends React.Component {
                 onChange={this.handleChange('description')}
               />
             </label>
+            </div>
           </form>
-          <img src={this.state.photoUrl} alt="media" />
-        </div>
-        <div className='edit-form-footer'>
+          <div className='edit-form-footer'>
           <div className='left-footer'>
             <button 
               className='delete-cancel' 
@@ -74,6 +77,11 @@ class EditPin extends React.Component {
               className='delete-cancel' onClick={closeModal}>Cancel</button>
             <button className='save' type='submit' onClick={this.handleSubmit}>Save</button>
           </div>
+        </div>
+        </div>
+        <div className="edit-form-right">
+          <img src={this.state.photoUrl} alt="media" />
+        </div>
         </div>
       </div>
     )
