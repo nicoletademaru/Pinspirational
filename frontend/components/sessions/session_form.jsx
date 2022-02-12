@@ -28,8 +28,15 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    
     const user = Object.assign({}, this.state);
+
     this.props.processForm(user)
+      .then(res => this.props.formType === 'Signup' ? 
+        this.props.createPinboard({
+          title: "Your Likes",
+          user_id: res.user.id
+        }) : "")
       .then(() => { this.setState({ errors: null }, this.props.closeModal())})
       .then(() => this.props.history.push('/feed'))
       .fail(res => {

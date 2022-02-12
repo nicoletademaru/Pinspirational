@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { withRouter } from 'react-router-dom';
 import SessionForm from "./session_form";
 import { openModal, closeModal } from "../../actions/modal_actions";
+import { createPinboard } from "../../actions/pinboard_actions";
 
 
 const mSTP = (state, ownProps) => ({
@@ -17,6 +18,7 @@ const mDTP = dispatch => ({
   demoLogin: user => dispatch(login(user)),
   processForm: user => dispatch(signup(user)),
   closeModal: () => dispatch(closeModal()),
+  createPinboard: pinboard => dispatch(createPinboard(pinboard)),
 })
 
 export default withRouter(connect(mSTP, mDTP)(SessionForm));

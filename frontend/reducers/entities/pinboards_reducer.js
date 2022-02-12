@@ -7,7 +7,11 @@ const PinboardsReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_USER:
-      return action.user.pinboards;
+      if (action.user.pinboards)
+        return action.user.pinboards;
+      else 
+        nextState[action.user.pinboards] = {};
+        return nextState
     case RECEIVE_BOARD:
       nextState[action.pinboard.pinboard.id] = action.pinboard.pinboard;
       return nextState;
