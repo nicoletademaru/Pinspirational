@@ -8,6 +8,7 @@
 Pin.destroy_all
 Pinboard.destroy_all
 User.destroy_all
+Pinning.destroy_all
 
 require 'open-uri'
 
