@@ -34,7 +34,7 @@ class SessionForm extends React.Component {
     this.props.processForm(user)
       .then(res => this.props.formType === 'Signup' ? 
         this.props.createPinboard({
-          title: "Your Likes",
+          title: "Your Liked Pins",
           user_id: res.user.id
         }) : "")
       .then(() => { this.setState({ errors: null }, this.props.closeModal())})
