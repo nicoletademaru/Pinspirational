@@ -89,10 +89,13 @@
 }
 
 .nav-content {
-  border-radius: 5px;
+  border-radius: 20px;
   width: 227px;
   font-weight: 300;
-  margin-top: 31px;
+  margin-top: 10px;
+  .logout {
+    margin-bottom: 10px
+  }
 }
 
 .nav-btn {
@@ -100,14 +103,31 @@
 } 
 
 .nav-item {
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 700;
   margin: 0 8px;
-  padding: 16px 8px;
+  padding: 10px 8px;
   transition: color .3s;
   transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .user-shortcut {
+  border-radius: 20px;
+  height: 70px;
+  width: 93%;
+  margin: 10px 0 0 8px;
+  h1 {
+    font-weight: 900;
+    float: left;
+    margin: 15px 0 0 5px;
+  }
+  p {
+    font-size: 14px;
+    color:rgb(93, 93, 93);
+    float:left;
+    position: absolute;
+    margin: 37px 0 0 75px;
+  }
   img {
     float:left;
     border-radius: 50%;
@@ -115,3 +135,8 @@
     margin: 10px;
   }
 } 
+
+.user-shortcut:hover {
+  background-color: #f0f0f0;
+  border-radius: 15px;
+}

@@ -19,7 +19,8 @@ class CreatePinboard extends React.Component {
   
     const pinboard1 = Object.assign({}, this.state);
     this.props.createPinboard(pinboard1)
-      .then(this.props.closeModal);
+      .then(this.props.closeModal)
+      .then(this.props.history.push(`/users/${this.props.userId}/pinboards`));
   }
 
   render() {

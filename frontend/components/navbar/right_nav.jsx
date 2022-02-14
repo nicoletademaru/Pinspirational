@@ -5,6 +5,7 @@ class RightNav extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this)
+    this.createPin = this.createPin.bind(this)
   }
 
   handleClick(e) {
@@ -21,8 +22,20 @@ class RightNav extends React.Component {
         <button className='signup-button' onClick={() => openModal('signup')}>Sign up</button>
       </nav> )
   }
+
+  createPin(e) {
+    e.preventDefault();
+    this.props.history.push('/pins')
+  }
+
+  createPinboard(e) {
+    e.preventDefault();
+    this.props.history.push('/pins')
+  }
+
+
   greeting() {
-    let { logout } = this.props;
+    let { logout, openModal} = this.props;
     return (
       <div className="header-group">
         <div className="header-user-icon">
@@ -37,16 +50,20 @@ class RightNav extends React.Component {
               src={downArrowUrl}
           />
           <div className='dropdown-content nav-content'>
-            <div className='user-shortcut'>
+            <div className='user-shortcut' onClick={this.handleClick}>
               <img 
                 src={this.props.currentUser.profile_pic} 
               />
               <h1>{this.props.currentUser.username}</h1>
+              <p>Profile</p>
             </div>
             <div className='drop-item nav-item'>
-              <p>Notifications</p>
+              <button className="header-button" onClick={this.createPin}>Create Pin</button>
             </div>
             <div className='drop-item nav-item'>
+              <button className="header-button" onClick={()=> openModal('pinboard')}>Create Pinboard</button>
+            </div>
+            <div className='drop-item nav-item logout'>
               <button className="header-button" onClick={logout}>Log Out</button>
             </div>
             </div>
