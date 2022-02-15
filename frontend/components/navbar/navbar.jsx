@@ -11,6 +11,7 @@ import { withRouter } from "react-router-dom";
 
     homeClick(e) {
       e.preventDefault();
+    
       this.props.history.push('/feed')
     }
 
@@ -24,17 +25,26 @@ import { withRouter } from "react-router-dom";
       return (
         <div className='navbar'>
           <div className='left-nav'>
-            <img className='logo' src={logoUrl} alt="logo" />
+            <img className='navbar-logo' src={logoUrl} alt="logo" />
             { currUser ?
                 <button
-                  className='home-button'
-                  onClick={this.homeClick}>
+                  className='left-nav-item'
+                  id='home-btn'
+                  onClick={this.homeClick}
+                  style={this.props.history.location.pathname === '/feed' ? {backgroundColor:'#292929',color:'white'} : {color:'black'}}>
                 Home</button>
               :
                 <p>Pinspiration</p>
             }
+            <input type="checkbox" id='connect-btn'/>
+            <label className='left-nav-item' htmlFor='connect-btn'>Connect</label>
+            <a className='left-nav-item social'
+            href='https://www.linkedin.com/in/nicole-tademaru-7800abb7/'>LinkedIn</a>
+            <a className='left-nav-item social'
+            href='https://github.com/nicoletademaru'>Github</a>
+
           </div>
-          <ul className='right-navbar'>
+          <ul className='connect-button right-navbar'>
             <RightNavContainer />
           </ul>
         <div className='underline'></div>

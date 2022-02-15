@@ -5,20 +5,27 @@
   box-shadow: 0 0 10px rgb(235, 232, 232);
   .left-nav {
     float: left;
+    width:100%;
     padding-left: 15px;
   }
 
   .right-navbar {
-    float: right;
+    position: absolute;
+    right:0;
     padding-right: 20px;
     margin-top: 10px;
   }
 }
 
 .logo {
-  margin-top: 3px;
   width: 45px;
-  margin-right: 5px;
+}
+
+.navbar-logo {
+  margin-top: 3px;
+  width: 45px;  
+  margin-right: 10px;
+  float: left;
 }
 
 .left-home-nav {
@@ -27,14 +34,14 @@
 }
 
 .left-nav > p {
-  float: right;
+  float: left;
   color: #DD011B;
   padding-top: 15px;
   font-weight: 600;
   font-size: 20px;
 }
 
-.login-signup > button, .home-button{
+.login-signup > button, .left-nav-item {
   font-size: 16px;
   font-weight: 650;
   border-radius: 20px;
@@ -52,14 +59,28 @@
   color: white
 }
 
-.home-button {
+.left-nav-item {
   float: right;
   color: black;
   margin-top: 7px;
+  float: left;
 }
 
-.home-button:hover {
+.left-nav-item:hover {
   background-color: #f1f1f1;
+}
+
+
+.social {
+  display: none;
+}
+
+#connect-btn {
+  display: none;
+}
+
+#connect-btn:checked ~ .social {
+  display: block;
 }
 
 .header-user-icon {
@@ -100,6 +121,7 @@
 
 .nav-btn {
   width: 40px;
+  margin-left: 7px;
 } 
 
 .nav-item {
@@ -140,3 +162,4 @@
   background-color: #f0f0f0;
   border-radius: 15px;
 }
+
