@@ -7,6 +7,8 @@ class Pin < ApplicationRecord
 
   has_many :pinnings 
 
+  has_many :comments
+
   has_many :pinboards, through: :pinnings, source: :pinboard
 
   has_one_attached :photo
